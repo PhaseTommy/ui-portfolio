@@ -57,12 +57,6 @@ const NavItems = styled(motion.h1)`
     }
 `;
 
-const Divider = styled.div`
-    width: 100%;
-    height: 2px;
-    margin-top: 64px;
-`;
-
 const SocialTop = styled.div`
     padding: 32px 32px 0px 32px;
 `;

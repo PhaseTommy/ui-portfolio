@@ -3,7 +3,6 @@ import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "./global.js";
 import { lightTheme, darkTheme } from "./theme.js";
 import storage from "local-storage-fallback";
-import { useMediaQuery } from "react-responsive";
 import styled from "styled-components";
 import DiabetesHeader from "./assets/diabetes-header.png";
 import BackArrow from "./assets/back-arrow.svg";
@@ -13,7 +12,6 @@ import DiabetesWireframes from "./assets/diabetes-wireframes.png";
 import DiabetesType from "./assets/type-choice.png";
 
 const Wrapper = styled.div``;
-const FullBleed = styled.div``;
 
 const CaseHero = styled.div`
     margin-top: 64px;
@@ -87,8 +85,6 @@ const Diabetes = () => {
         const savedTheme = storage.getItem("theme");
         return savedTheme ? JSON.parse(savedTheme) : { theme: "light" };
     };
-    const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1024px)" });
-    const isDesktop = useMediaQuery({ query: "(min-width: 1025px)" });
 
     const [theme, setTheme] = useState(getInitialTheme);
 
