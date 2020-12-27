@@ -1,14 +1,14 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import styled from "styled-components";
 import CloseIcon from "../assets/close.svg";
 import { NavbarContextList } from "../context/NavbarContext";
 import { motion } from "framer-motion";
 
 const NavWrapper = styled(motion.div)`
-    position: absolute;
+    position: fixed;
     top: 0;
-    height: 100vh;
-    right: 0;
+    height: 100%;
+
     width: 100%;
     z-index: 5;
 `;
@@ -20,7 +20,6 @@ const NavMain = styled(motion.div)`
     border-bottom-left-radius: 20px; */
     display: flex;
     flex-direction: column;
-    overflow-y: scroll;
 `;
 
 const NavTop = styled.div`
@@ -62,7 +61,8 @@ const SocialTop = styled.div`
 `;
 
 const ContactButton = styled.button`
-    height: 40px;
+    padding-top: 16px;
+    padding-bottom: 16px;
     padding-right: 24px;
     padding-left: 24px;
     background: #ff661a;
@@ -73,6 +73,7 @@ const ContactButton = styled.button`
     font-size: 0.8rem;
     color: white;
     width: 100%;
+    /* margin-bottom: 64px; */
 `;
 
 const NavBottom = styled.div`
@@ -122,6 +123,14 @@ const MobileNav = () => {
         setMobileNav(!mobileNav);
     };
 
+    useEffect(() => {
+        if (mobileNav) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "scroll";
+        }
+    });
+
     return (
         <NavWrapper
             key="menu"
@@ -170,7 +179,9 @@ const MobileNav = () => {
                     </NavItems>
                 </NavM>
                 <NavBottom>
-                    <ContactButton>Contact Me!</ContactButton>
+                    <ContactButton className="button-text">
+                        Contact Me!
+                    </ContactButton>
                 </NavBottom>
             </NavMain>
         </NavWrapper>

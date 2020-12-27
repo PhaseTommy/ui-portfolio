@@ -13,7 +13,7 @@ const NavWrapper = styled.section`
     display: flex;
     margin-left: 20%;
     margin-right: 20%;
-    padding-top: 16px;
+    padding-top: 32px;
     padding-bottom: 16px;
     align-items: center;
     justify-content: space-between;

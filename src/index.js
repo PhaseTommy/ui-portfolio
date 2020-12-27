@@ -3,13 +3,12 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import NavbarContextListProvider from "./context/NavbarContext";
 
 ReactDOM.render(
     <React.StrictMode>
-        <NavbarContextListProvider>
+        <div className="wrap">
             <App />
-        </NavbarContextListProvider>
+        </div>
     </React.StrictMode>,
     document.getElementById("root")
 );

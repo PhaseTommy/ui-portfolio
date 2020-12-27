@@ -7,6 +7,7 @@ import MobileNav from "./components/MobileNav";
 import { NavbarContextList } from "./context/NavbarContext";
 import Hero from "./components/Hero";
 import Work from "./components/Work";
+import Skills from "./components/Skills";
 
 function Home() {
     const { mobileNav } = useContext(NavbarContextList);
@@ -20,6 +21,7 @@ function Home() {
             </AnimatePresence>
             <Hero />
             <Work />
+            <Skills />
         </div>
     );
 }

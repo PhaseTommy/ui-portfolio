@@ -53,14 +53,18 @@ export const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.primaryText};    
 
 }
+.info-title{
+    color: ${({ theme }) => theme.primaryText};    
+
+}
 
 .diabetes-info{
-    background: ${({ theme }) => theme.body}; 
+    background: ${({ theme }) => theme.secondary}; 
 
 }
 
 .icon{
-    background: ${({ theme }) => theme.secondary}; 
+    background: ${({ theme }) => theme.body}; 
 
 
 }
@@ -95,6 +99,15 @@ export const GlobalStyles = createGlobalStyle`
 
 .paragraph{
     color: ${({ theme }) => theme.primaryText} !important;    
+
+}
+
+.tags{
+    background: ${({ theme }) => theme.secondary} !important;  
+
+}
+.hero-bg{
+    background: ${({ theme }) => theme.accent} !important;  
 
 }
 

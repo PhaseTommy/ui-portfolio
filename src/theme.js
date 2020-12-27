@@ -20,12 +20,13 @@ export const lightTheme = {
     taskBorder: "#E2DAF1",
     activeNav: "#F6F2FA",
     taskBubble: "#ffffff",
+    accent: "#F8F8F8",
 };
 
 export const darkTheme = {
     body: "#121517",
     primaryText: "#F8F8F8",
-    secondaryText: "#50616B",
+    secondaryText: "#8B9EA9",
     toggleBorder: "#212A35",
     secondary: "#1D2225",
     primary: "#0A84FF",
@@ -44,4 +45,5 @@ export const darkTheme = {
     taskBorder: "#4B4A6D",
     activeNav: "#2F2E44",
     taskBubble: "#3A3A55",
+    accent: "#0d1011",
 };

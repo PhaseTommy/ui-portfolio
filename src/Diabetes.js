@@ -10,6 +10,8 @@ import { NavLink } from "react-router-dom";
 import DarkIcon from "./assets/dark.svg";
 import DiabetesWireframes from "./assets/diabetes-wireframes.png";
 import DiabetesType from "./assets/type-choice.png";
+import ColoursDiabetes from "./assets/colours-diabetes.png";
+import FinalDiabetes from "./assets/diabetes-final-screens.png";
 
 const Wrapper = styled.div``;
 
@@ -39,12 +41,18 @@ const CaseSubtitle = styled.h3`
 const BodyTitle = styled.h2`
     margin-top: 64px;
     font-weight: 800;
+    color: #ff661a;
+    font-size: 1.6rem;
 `;
 
 const QuoteBlock = styled.div`
     padding: 8px;
     border-radius: 8px;
-    color: #ff661a;
+
+    @media (max-width: 550px) {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
 `;
 
 const ReturnBtn = styled.div`
@@ -78,6 +86,7 @@ const ModeToggle = styled.button`
 
 const ParagraphText = styled.p`
     font-weight: 600;
+    line-height: 180%;
 `;
 
 const Diabetes = () => {
@@ -132,15 +141,17 @@ const Diabetes = () => {
                         </CaseSubtitle>
                     </CaseHero>
                     <img
+                        loading="lazy"
                         alt="Mobile Screenshots"
                         className="full-bleed"
                         src={DiabetesHeader}
                     ></img>
-                    <BodyTitle style={{ color: "#B255FF" }} className="">
-                        The Problem
-                    </BodyTitle>
+                    <BodyTitle className="">The Problem</BodyTitle>
                     <QuoteBlock>
-                        <CaseTitleLg style={{ marginTop: "64px" }}>
+                        <CaseTitleLg
+                            className="hero-title"
+                            style={{ marginTop: "64px" }}
+                        >
                             “How might we improve the functionality and features
                             of the CGM to ensure a better experience for
                             diabetics using them?”
@@ -166,14 +177,13 @@ const Diabetes = () => {
                         patterns already found in similar applications.
                     </ParagraphText>
                     <img
+                        loading="lazy"
                         style={{ marginTop: "64px" }}
                         alt="Mobile Screenshots"
                         className="full-bleed"
                         src={DiabetesWireframes}
                     ></img>
-                    <BodyTitle style={{ color: "#2B99FF" }} className="">
-                        The Process
-                    </BodyTitle>
+                    <BodyTitle className="">The Process</BodyTitle>
                     <ParagraphText
                         style={{ marginTop: "64px" }}
                         className="paragraph"
@@ -202,14 +212,70 @@ const Diabetes = () => {
                         represent different visual elements.
                     </ParagraphText>
                     <img
+                        loading="lazy"
                         style={{ marginTop: "64px" }}
                         alt="Mobile Screenshots"
                         className="full-bleed"
                         src={DiabetesType}
                     ></img>
-                    <BodyTitle style={{ color: "#31E39F" }} className="">
-                        The Type Choice
-                    </BodyTitle>
+                    <BodyTitle className="">The Type Choice</BodyTitle>
+                    <ParagraphText
+                        style={{ marginTop: "64px" }}
+                        className="paragraph"
+                    >
+                        Typeface choice is usually a dificult decision. In this
+                        instance it was important to have something that was
+                        visually appealing; but also very effective at
+                        communicating data. This is because when dealing with
+                        sensitive data it is imperative that it is easily
+                        legible and not easily confused. <br />
+                        <br /> Amidst the visual overhaul it was important to
+                        have a typeface that showed off the modern visuals and
+                        accompany it accordingly. I also ensured that it was
+                        versatile at different weights and that light body text
+                        was still easily legible.
+                        <br />
+                        <br />
+                        The typeface that I decided was appropriate for this
+                        project was 'Circular STD'. Circular is a geometric
+                        sans-serif type that was created by Swiss designer
+                        Laurenz Brunner; it is based off geometric shapes but
+                        features significant quirks that add to the welcoming
+                        feel of the type.
+                    </ParagraphText>
+                    <img
+                        loading="lazy"
+                        style={{ marginTop: "64px" }}
+                        alt="Colours"
+                        className="full-bleed"
+                        src={ColoursDiabetes}
+                    ></img>
+                    <BodyTitle className="">The Colours</BodyTitle>
+                    <ParagraphText
+                        style={{ marginTop: "64px" }}
+                        className="paragraph"
+                    >
+                        The colours in contribute massively to the UX of the
+                        interface and allow for it to function effectively. The
+                        purple was chosen as a calming and welcoming colour that
+                        prevents the user from feeling overwhelmed before they
+                        enter the crux of the application. <br />
+                        <br /> The other three 'bright' colours are used in the
+                        'traffic light' system to ensure the user gets a visual
+                        response to accompany text values; allowing them to more
+                        easily determine if they are too high or too low. I
+                        wanted the colours to be recognisable but also modern,
+                        as a result I decided that pastel colours where more
+                        likely to give the application a more modern feel.
+                    </ParagraphText>
+                    <img
+                        loading="lazy"
+                        style={{ marginTop: "64px" }}
+                        alt="Final Outcomes"
+                        className="full-bleed"
+                        src={FinalDiabetes}
+                    ></img>
+                    <BodyTitle className="">The Outcome</BodyTitle>
                 </Wrapper>
             </ThemeProvider>
         </div>
