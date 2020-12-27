@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import DiabetesSS from "../assets/diabetes-ss.png";
-import PhoneIcon from "../assets/phone-icon.svg";
+
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
 import WorkBG from "../assets/work-bg.png";
