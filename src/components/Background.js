@@ -51,7 +51,7 @@ const Background = () => {
                     <BackgroundImage>
                         <RingBG src={CircleBG}></RingBG>
                         <iframe
-                            title="3D"
+                            title="3D Shapes"
                             src="https://my.spline.design/poertfolio-0442c98cffc16338ec2f1977676843e2/"
                             frameBorder="0"
                         ></iframe>
