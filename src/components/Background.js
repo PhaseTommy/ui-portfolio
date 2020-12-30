@@ -47,7 +47,7 @@ const Background = () => {
         <>
             {isDesktop && (
                 <>
-                    <DarkBG className="hero-bg"></DarkBG>
+                    {/* <DarkBG className="hero-bg"></DarkBG> */}
                     <BackgroundImage>
                         <RingBG src={CircleBG}></RingBG>
                         <iframe

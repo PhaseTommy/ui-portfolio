@@ -104,11 +104,37 @@ export const GlobalStyles = createGlobalStyle`
 
 .tags{
     background: ${({ theme }) => theme.secondary} !important;  
+    &:hover{
+        transition: background 0.2s ease-in-out;
+        background: ${({ theme }) => theme.accent}
+    }
 
 }
 .hero-bg{
     background: ${({ theme }) => theme.accent} !important;  
 
+}
+
+.toggle-icon-fill {
+    fill: ${({ theme }) => theme.primaryText} !important;  
+}
+
+.headroom--pinned{
+
+
+    background: ${({ theme }) => theme.body} !important; 
+    box-shadow: 0px 9px 54px 8px ${({ theme }) => theme.shadow};
+    
+}
+
+.about-bg{
+    background: ${({ theme }) => theme.accent} !important;  
+
+}
+
+.contact-btn{
+   background: ${({ theme }) => theme.body} !important;     
+    
 }
 
 `;

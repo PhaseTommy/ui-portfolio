@@ -6,9 +6,15 @@ const HeroWrapper = styled.div`
     margin-left: 20%;
     margin-right: 20%;
     margin-top: 200px;
-    z-index: 2;
+    z-index: 0;
     position: relative;
     user-select: none;
+    @media (min-width: 1500px) {
+        margin: 0 auto;
+        max-width: 900px;
+        margin-top: 180px;
+    }
+
     @media (max-width: 1024px) {
         display: flex;
         flex-direction: column;
@@ -79,10 +85,12 @@ const Hero = () => {
                 {isDesktop && <SmallLine className="line"></SmallLine>}
                 {isTabletOrMobile && (
                     <SmallTitleMin className="small-title">
-                        UI/UX Engineer
+                        UI/UX Designer & Engineer
                     </SmallTitleMin>
                 )}
-                {isDesktop && <SmallTitle>UI/UX Engineer</SmallTitle>}
+                {isDesktop && (
+                    <SmallTitle>UI/UX Designer & Engineer</SmallTitle>
+                )}
             </SmallWrap>
             <HeroTitle className="hero-title">
                 I build beautiful experiences with human interaction in mind.

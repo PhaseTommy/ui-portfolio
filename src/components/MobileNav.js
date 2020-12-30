@@ -3,6 +3,7 @@ import styled from "styled-components";
 import CloseIcon from "../assets/close.svg";
 import { NavbarContextList } from "../context/NavbarContext";
 import { motion } from "framer-motion";
+import { NavLink } from "react-router-dom";
 
 const NavWrapper = styled(motion.div)`
     position: fixed;
@@ -38,13 +39,14 @@ const CloseButton = styled.button`
     height: 32px;
     border-radius: 8px;
     border: none;
+    background: none;
 `;
 
 const NavM = styled.div`
     display: flex;
     flex-direction: column;
     margin-top: 32px;
-    padding-left: 64px;
+    padding-left: 48px;
 `;
 
 const NavItems = styled(motion.h1)`
@@ -73,7 +75,6 @@ const ContactButton = styled.button`
     font-size: 0.8rem;
     color: white;
     width: 100%;
-    /* margin-bottom: 64px; */
 `;
 
 const NavBottom = styled.div`
@@ -123,14 +124,6 @@ const MobileNav = () => {
         setMobileNav(!mobileNav);
     };
 
-    useEffect(() => {
-        if (mobileNav) {
-            document.body.style.overflow = "hidden";
-        } else {
-            document.body.style.overflow = "scroll";
-        }
-    });
-
     return (
         <NavWrapper
             key="menu"
@@ -146,19 +139,35 @@ const MobileNav = () => {
                 className="mobile-nav"
             >
                 <NavTop>
-                    <NavTitle>Navigation</NavTitle>
-                    <CloseButton onClick={toggleMenu} className="toggle">
-                        <img
-                            style={{ paddingTop: "2px" }}
-                            alt="Close Button"
-                            src={CloseIcon}
-                        ></img>
+                    <NavTitle>Case Studies</NavTitle>
+                    <CloseButton onClick={toggleMenu}>
+                        <svg
+                            width="12"
+                            height="12"
+                            viewBox="0 0 12 12"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M0.29289 0.29289C0.68342 -0.09763 1.31658 -0.09763 1.70711 0.29289L6 4.58579L10.2929 0.29289C10.6834 -0.09763 11.3166 -0.09763 11.7071 0.29289C12.0976 0.68342 12.0976 1.31658 11.7071 1.70711L7.4142 6L11.7071 10.2929C12.0976 10.6834 12.0976 11.3166 11.7071 11.7071C11.3166 12.0976 10.6834 12.0976 10.2929 11.7071L6 7.4142L1.70711 11.7071C1.31658 12.0976 0.68342 12.0976 0.29289 11.7071C-0.09763 11.3166 -0.09763 10.6834 0.29289 10.2929L4.58579 6L0.29289 1.70711C-0.09763 1.31658 -0.09763 0.68342 0.29289 0.29289Z"
+                                fill="#50616B"
+                            />
+                        </svg>
                     </CloseButton>
                 </NavTop>
                 <NavM>
-                    <NavItems variants={item} className="nav-item">
-                        Work
-                    </NavItems>
+                    <NavLink
+                        onClick={toggleMenu}
+                        exactly
+                        to="/diabetes"
+                        style={{ textDecoration: "none" }}
+                    >
+                        <NavItems variants={item} className="nav-item">
+                            Living with Diabetes
+                        </NavItems>
+                    </NavLink>
                     <NavItems variants={item} className="nav-item">
                         About Me
                     </NavItems>

@@ -1,14 +1,24 @@
 import React from "react";
 import styled from "styled-components";
+import BG from "../assets/skills-bg.png";
+
+const Content = styled.div`
+    width: 100%;
+`;
 
 const SkillsWrapper = styled.section`
     margin-left: 20%;
     margin-right: 20%;
-    margin-top: 128px;
+    margin-top: 300px;
+    @media (min-width: 1500px) {
+        margin: 0 auto;
+        max-width: 900px;
+        margin-top: 300px;
+    }
     @media (max-width: 1024px) {
         margin-left: 32px;
         margin-right: 32px;
-        /* margin-top: 300px; */
+        margin-top: 180px;
     }
 `;
 
@@ -46,6 +56,7 @@ const Tags = styled.div`
     border-radius: 8px;
     margin-bottom: 16px;
     margin-right: 16px;
+
     @media (max-width: 550px) {
         padding: 8px 16px;
         margin-right: 8px;
@@ -63,39 +74,41 @@ const Spacer = styled.span`
 `;
 const Skills = () => {
     return (
-        <SkillsWrapper>
-            <SmallWrap>
-                <SmallLine className="line"></SmallLine>
-                <SmallTitle>My Skills</SmallTitle>
-            </SmallWrap>
-            <TagsWrapper>
-                <Tags className="tags">#react</Tags>
+        <Content>
+            <SkillsWrapper>
+                <SmallWrap>
+                    <SmallLine className="line"></SmallLine>
+                    <SmallTitle>My Skills</SmallTitle>
+                </SmallWrap>
+                <TagsWrapper>
+                    <Tags className="tags">#react</Tags>
 
-                <Tags className="tags">#web-dev</Tags>
+                    <Tags className="tags">#web-dev</Tags>
 
-                <Tags className="tags">#css</Tags>
+                    <Tags className="tags">#css</Tags>
 
-                <Tags className="tags">#html</Tags>
+                    <Tags className="tags">#html</Tags>
 
-                <Tags className="tags">#javascript</Tags>
+                    <Tags className="tags">#javascript</Tags>
 
-                <Tags className="tags">#next</Tags>
+                    <Tags className="tags">#next</Tags>
 
-                <Tags className="tags">#gatsby</Tags>
+                    <Tags className="tags">#gatsby</Tags>
 
-                <Tags className="tags">#ui-design</Tags>
+                    <Tags className="tags">#ui-design</Tags>
 
-                <Tags className="tags">#ux-design</Tags>
+                    <Tags className="tags">#ux-design</Tags>
 
-                <Tags className="tags">#figma</Tags>
+                    <Tags className="tags">#figma</Tags>
 
-                <Tags className="tags">#illustrator</Tags>
+                    <Tags className="tags">#illustrator</Tags>
 
-                <Tags className="tags">#protopie</Tags>
+                    <Tags className="tags">#protopie</Tags>
 
-                <Tags className="tags">#gatsby</Tags>
-            </TagsWrapper>
-        </SkillsWrapper>
+                    <Tags className="tags">#gatsby</Tags>
+                </TagsWrapper>
+            </SkillsWrapper>
+        </Content>
     );
 };
 

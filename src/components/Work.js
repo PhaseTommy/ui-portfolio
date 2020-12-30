@@ -16,14 +16,19 @@ const WorkWrapper = styled.div`
     @media (max-width: 1024px) {
         margin-left: 32px;
         margin-right: 32px;
-        margin-top: 300px;
+        margin-top: 180px;
+    }
+    @media (min-width: 1500px) {
+        margin: 0 auto;
+        max-width: 900px;
+        margin-top: 360px;
     }
 `;
 
 const DiabetesWrap = styled(motion.div)`
     background: url("${WorkBG}");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
     background-position: center;
     width: 100%;
     height: 300px;
@@ -35,20 +40,26 @@ const DiabetesWrap = styled(motion.div)`
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
+    transition: background-size 0.2s ease-in-out;
+
+    &:hover {
+        background-size: 120%;
+    }
 
     @media (max-width: 640px) {
         justify-content: center;
         padding: 16px;
-
+        background-size: cover;
         text-align: center;
         border-radius: 10px;
+        height: 240px;
     }
 `;
 
 const DiabetesWrapTwo = styled(motion.div)`
     background: url("${WorkBGTwo}");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
     background-position: center;
     width: 100%;
     height: 300px;
@@ -60,9 +71,16 @@ const DiabetesWrapTwo = styled(motion.div)`
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
+    transition: background-size 0.2s ease-in-out;
+
+    &:hover {
+        background-size: 120%;
+    }
 
     @media (max-width: 640px) {
         justify-content: center;
+        background-size: cover;
+        height: 240px;
         padding: 16px;
         text-align: center;
         border-radius: 10px;
@@ -138,6 +156,32 @@ const SmallWrap = styled.div`
     margin-bottom: 64px;
 `;
 
+const ArrowIcon = styled.svg`
+    @keyframes arrow-move {
+        0% {
+            transform: translate(0px);
+        }
+        50% {
+            transform: translate(2px);
+        }
+        100% {
+            transform: translate(0px);
+        }
+    }
+    fill: white;
+    ${DiabetesWrap}:hover & {
+        animation: arrow-move 1s infinite;
+        transition: fill 0.4s ease-in-out;
+        fill: orange;
+    }
+
+    ${DiabetesWrapTwo}:hover & {
+        animation: arrow-move 1s infinite;
+        transition: fill 0.4s ease-in-out;
+        fill: orange;
+    }
+`;
+
 const DiabetesMain = {
     rest: {
         y: 0,
@@ -200,11 +244,18 @@ const Work = () => {
                         </DiabetesTitle>
                         <ViewWrap>
                             <ViewText>View the full case study</ViewText>
-                            <img
-                                style={{ marginLeft: "8px" }}
-                                alt="Right Arrow"
-                                src={WorkArrow}
-                            ></img>
+                            <ArrowIcon
+                                width="16"
+                                height="16"
+                                viewBox="0 0 16 16"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    fill-rule="evenodd"
+                                    clip-rule="evenodd"
+                                    d="M-3.49691e-07 8C-5.42821e-07 12.4183 3.5817 16 8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 -1.56562e-07 8 -3.49691e-07C3.5817 -5.42821e-07 -1.56562e-07 3.58172 -3.49691e-07 8ZM8.70711 11.7071L11.7071 8.7071C12.0976 8.3166 12.0976 7.68342 11.7071 7.29289L8.70711 4.29289C8.31658 3.90237 7.6834 3.90237 7.2929 4.29289C6.9024 4.68342 6.9024 5.31658 7.2929 5.70711L8.58579 7L5 7C4.4477 7 4 7.44771 4 8C4 8.5523 4.4477 9 5 9L8.58579 9L7.2929 10.2929C6.9024 10.6834 6.9024 11.3166 7.2929 11.7071C7.6834 12.0976 8.31658 12.0976 8.70711 11.7071Z"
+                                />
+                            </ArrowIcon>
                         </ViewWrap>
                     </DiabetesTitleWrap>
                     <DiabetesImage
@@ -231,11 +282,18 @@ const Work = () => {
                         </DiabetesTitle>
                         <ViewWrap>
                             <ViewText>View the full case study</ViewText>
-                            <img
-                                style={{ marginLeft: "8px" }}
-                                alt="Right Arrow"
-                                src={WorkArrow}
-                            ></img>
+                            <ArrowIcon
+                                width="16"
+                                height="16"
+                                viewBox="0 0 16 16"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    fill-rule="evenodd"
+                                    clip-rule="evenodd"
+                                    d="M-3.49691e-07 8C-5.42821e-07 12.4183 3.5817 16 8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 -1.56562e-07 8 -3.49691e-07C3.5817 -5.42821e-07 -1.56562e-07 3.58172 -3.49691e-07 8ZM8.70711 11.7071L11.7071 8.7071C12.0976 8.3166 12.0976 7.68342 11.7071 7.29289L8.70711 4.29289C8.31658 3.90237 7.6834 3.90237 7.2929 4.29289C6.9024 4.68342 6.9024 5.31658 7.2929 5.70711L8.58579 7L5 7C4.4477 7 4 7.44771 4 8C4 8.5523 4.4477 9 5 9L8.58579 9L7.2929 10.2929C6.9024 10.6834 6.9024 11.3166 7.2929 11.7071C7.6834 12.0976 8.31658 12.0976 8.70711 11.7071Z"
+                                />
+                            </ArrowIcon>
                         </ViewWrap>
                     </DiabetesTitleWrap>
                     <DiabetesImage
