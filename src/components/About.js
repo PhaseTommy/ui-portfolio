@@ -76,20 +76,27 @@ const About = () => {
                 <AboutInfoWrap>
                     <LargeTitle>A little bit about me.</LargeTitle>
                     <ParagraphText className="paragraph">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum dolore eu
-                        fugiat nulla pariatur. <br />
-                        <br /> Excepteur sint occaecat cupidatat non proident,
-                        sunt in culpa qui officia deserunt mollit anim id est
-                        laborum. Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut
-                        aliquip ex ea commodo consequat.
+                        I am a UX/UI designer and front-end developer. I am
+                        currently studying Graphic Design at Sheffield Hallam
+                        University (Final Year), where I am specialising in User
+                        Experience this year. I already have great understanding
+                        of the entire product development process, and believe
+                        that my skills as a designer and my understanding of the
+                        development process give me a unique skillset. <br />
+                        <br />
+                        Since the age of 17 I have been working freelance on a
+                        range of products that have refined and developed my
+                        skillset massively. Some of the projects I have worked
+                        on include: Phase Robotics, Signal (Shift Management),
+                        Trato (Contract Management). <br />
+                        <br />
+                        Outside of design and development I have a number of
+                        hobbies. I enjoy getting outside as much as possible and
+                        I am a keen carp angler, it provides a nice break from
+                        screen time and allows me to reset and relax. I also
+                        love Drum & Bass music and frequently DJ in my
+                        spare-time, music is a great release for me from the
+                        stresses of life.
                     </ParagraphText>
                 </AboutInfoWrap>
             </AboutWrapper>
