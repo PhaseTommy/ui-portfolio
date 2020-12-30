@@ -5,14 +5,20 @@ import { lightTheme, darkTheme } from "./theme.js";
 import storage from "local-storage-fallback";
 import styled from "styled-components";
 import DiabetesHeader from "./assets/diabetes-header.png";
+
 import BackArrow from "./assets/back-arrow.svg";
 import { NavLink } from "react-router-dom";
 import DarkIcon from "./assets/dark.svg";
 import DiabetesWireframes from "./assets/diabetes-wireframes.png";
+
 import DiabetesType from "./assets/type-choice.png";
+
 import ColoursDiabetes from "./assets/colours-diabetes.png";
+
 import FinalDiabetes from "./assets/diabetes-final-screens.png";
+
 import { NavbarContextList } from "./context/NavbarContext";
+import Img from "react-webp-image";
 
 const Wrapper = styled.div``;
 

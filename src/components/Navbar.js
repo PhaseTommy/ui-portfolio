@@ -119,7 +119,7 @@ const Navbar = () => {
 
     const getInitialTheme = () => {
         const savedTheme = storage.getItem("theme");
-        return savedTheme ? JSON.parse(savedTheme) : { theme: "light" };
+        return savedTheme ? JSON.parse(savedTheme) : { theme: "dark" };
     };
     const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1024px)" });
     const isDesktop = useMediaQuery({ query: "(min-width: 1025px)" });
@@ -129,12 +129,12 @@ const Navbar = () => {
 
     const toggleTheme = () => {
         // if the theme is not light, then set it to dark
-        if (theme === "light") {
-            setTheme("dark");
+        if (theme === "dark") {
+            setTheme("light");
 
             // otherwise, it should be light
         } else {
-            setTheme("light");
+            setTheme("dark");
         }
     };
 
