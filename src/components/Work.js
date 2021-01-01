@@ -1,11 +1,15 @@
 import styled from "styled-components";
 import DiabetesSS from "../assets/diabetes-ss.png";
+import DiabetesSSWebP from "../assets/diabetes-ss.webp";
+
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
 import WorkBG from "../assets/work-bg.png";
 import WorkBGTwo from "../assets/work-bg-2.png";
+import ImgWithFallbackTwo from "./ImgWithFallbackTwo";
 
 import PhaseMock from "../assets/phase-mockup.png";
+import PhaseMockWebP from "../assets/phase-mockup.webp";
 
 const WorkWrapper = styled.div`
     margin-left: 20%;
@@ -106,7 +110,7 @@ const DiabetesTitle = styled.h1`
     }
 `;
 
-const DiabetesImage = styled.img`
+const DiabetesImage = styled(ImgWithFallbackTwo)`
     max-width: 140px !important;
     min-width: 140px !important;
     width: 16%;
@@ -116,7 +120,7 @@ const DiabetesImage = styled.img`
     }
 `;
 
-const PhaseImage = styled.img`
+const PhaseImage = styled(ImgWithFallbackTwo)`
     width: 340px !important;
     min-width: 240px !important;
     width: 16%;
@@ -270,7 +274,8 @@ const Work = () => {
                     </DiabetesTitleWrap>
                     <DiabetesImage
                         alt="Diabetes Screenshot"
-                        src={DiabetesSS}
+                        src={DiabetesSSWebP}
+                        fallback={DiabetesSS}
                     ></DiabetesImage>
                 </DiabetesWrap>
             </NavLink>
@@ -308,7 +313,8 @@ const Work = () => {
                     </DiabetesTitleWrap>
                     <PhaseImage
                         alt="Diabetes Screenshot"
-                        src={PhaseMock}
+                        src={PhaseMockWebP}
+                        fallback={PhaseMock}
                     ></PhaseImage>
                 </DiabetesWrapTwo>
             </NavLink>

@@ -1,7 +1,10 @@
 import BackgroundIMG from "../assets/scene.png";
 import CircleBG from "../assets/background.png";
+import CircleBGWebP from "../assets/background.webp";
+
 import styled from "styled-components";
 import { useMediaQuery } from "react-responsive";
+import ImgWithFallbackTwo from "./ImgWithFallbackTwo";
 
 const BackgroundImage = styled.div`
     position: absolute;
@@ -20,7 +23,7 @@ const MobileImage = styled.div`
     right: -400px;
 `;
 
-const RingBG = styled.img`
+const RingBG = styled(ImgWithFallbackTwo)`
     position: absolute;
     right: 200px;
     top: 0;
@@ -49,7 +52,11 @@ const Background = () => {
                 <>
                     {/* <DarkBG className="hero-bg"></DarkBG> */}
                     <BackgroundImage>
-                        <RingBG src={CircleBG}></RingBG>
+                        <RingBG
+                            src={CircleBGWebP}
+                            fallback={CircleBG}
+                            alt="Ring Background Image"
+                        ></RingBG>
                     </BackgroundImage>
                 </>
             )}

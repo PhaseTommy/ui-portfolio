@@ -1,7 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import Logo from "../assets/logo.png";
+import LogoWebP from "../assets/logo.webp";
+
 import { NavLink } from "react-router-dom";
+import ImgWithFallbackTwo from "../components/ImgWithFallbackTwo";
 
 const FooterWrap = styled.div`
     width: 100%;
@@ -65,8 +68,8 @@ const FootR = styled.div`
     }
 `;
 
-const FootLogo = styled.img`
-    width: 95px;
+const FootLogo = styled(ImgWithFallbackTwo)`
+    width: 70px;
 `;
 
 const LogoText = styled.h3`
@@ -110,7 +113,7 @@ const Footer = () => {
                     </FooterItem>
                 </FootL>
                 <FootM>
-                    <FootLogo src={Logo}></FootLogo>
+                    <FootLogo src={LogoWebP} fallback={Logo} alt="Logo" />
                     <LogoText>All rights reserved Tommy Smith</LogoText>
                 </FootM>
                 <FootR>

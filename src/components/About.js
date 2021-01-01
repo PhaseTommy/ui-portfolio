@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import InfoIcon from "../assets/info-icon.png";
+import InfoIconWebP from "../assets/info-icon.webp";
+import ImgWithFallbackTwo from "../components/ImgWithFallbackTwo";
 
 const ContentWrap = styled.section`
     padding: 64px 32px;
@@ -37,7 +39,7 @@ const AboutWrapper = styled.div`
     }
 `;
 
-const AboutImage = styled.img`
+const AboutImage = styled(ImgWithFallbackTwo)`
     margin-right: 16px;
 
     min-width: 340px;
@@ -71,8 +73,12 @@ const About = () => {
     return (
         <ContentWrap className="about-bg">
             <AboutWrapper>
-                <AboutImage src={InfoIcon} alt="About Me Icon" />
-
+                <AboutImage
+                    className="test"
+                    src={InfoIconWebP}
+                    fallback={InfoIcon}
+                    alt="About Me Icon"
+                />
                 <AboutInfoWrap>
                     <LargeTitle>A little bit about me.</LargeTitle>
                     <ParagraphText className="paragraph">
