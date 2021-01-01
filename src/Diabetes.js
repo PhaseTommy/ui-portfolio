@@ -5,20 +5,25 @@ import { lightTheme, darkTheme } from "./theme.js";
 import storage from "local-storage-fallback";
 import styled from "styled-components";
 import DiabetesHeader from "./assets/diabetes-header.png";
+import DiabetesHeaderWebP from "./assets/diabetes-header.webp";
 
 import BackArrow from "./assets/back-arrow.svg";
 import { NavLink } from "react-router-dom";
 import DarkIcon from "./assets/dark.svg";
 import DiabetesWireframes from "./assets/diabetes-wireframes.png";
+import DiabetesWireframesWebP from "./assets/diabetes-wireframes.webp";
 
 import DiabetesType from "./assets/type-choice.png";
+import DiabetesTypeWebP from "./assets/type-choice.webp";
 
 import ColoursDiabetes from "./assets/colours-diabetes.png";
+import ColoursDiabetesWebP from "./assets/colours-diabetes.webp";
 
 import FinalDiabetes from "./assets/diabetes-final-screens.png";
+import FinalDiabetesWebP from "./assets/diabetes-final-screens.webp";
 
 import { NavbarContextList } from "./context/NavbarContext";
-import Img from "react-webp-image";
+import ImgWithFallback from "./components/ImgWithFallback";
 
 const Wrapper = styled.div``;
 
@@ -92,7 +97,8 @@ const ModeToggle = styled.button`
 `;
 
 const ParagraphText = styled.p`
-    font-weight: 600;
+    font-family: "Merriweather";
+    font-weight: 400;
     line-height: 180%;
 `;
 
@@ -117,11 +123,11 @@ const SunIcon = styled.path`
 const Diabetes = () => {
     const getInitialTheme = () => {
         const savedTheme = storage.getItem("theme");
-        return savedTheme ? JSON.parse(savedTheme) : { theme: "light" };
+        return savedTheme ? JSON.parse(savedTheme) : { theme: "dark" };
     };
 
     const [theme, setTheme] = useState(getInitialTheme);
-    const [themeCounter, setThemeCounter] = useState();
+    const [themeCounter, setThemeCounter] = useState(0);
 
     const toggleTheme = () => {
         // if the theme is not light, then set it to dark
@@ -205,12 +211,12 @@ const Diabetes = () => {
                             application to manage their condition easily.
                         </CaseSubtitle>
                     </CaseHero>
-                    <img
-                        loading="lazy"
+                    <ImgWithFallback
+                        src={DiabetesHeaderWebP}
+                        fallback={DiabetesHeader}
                         alt="Mobile Screenshots"
-                        className="full-bleed"
-                        src={DiabetesHeader}
-                    ></img>
+                    />
+
                     <BodyTitle className="">The Problem</BodyTitle>
                     <QuoteBlock>
                         <CaseTitleLg
@@ -241,13 +247,12 @@ const Diabetes = () => {
                         existing UX patterns; but also improving on successful
                         patterns already found in similar applications.
                     </ParagraphText>
-                    <img
-                        loading="lazy"
+                    <ImgWithFallback
                         style={{ marginTop: "64px" }}
-                        alt="Mobile Screenshots"
-                        className="full-bleed"
-                        src={DiabetesWireframes}
-                    ></img>
+                        src={DiabetesWireframesWebP}
+                        fallback={DiabetesWireframes}
+                        alt="Mobile Wireframes"
+                    />
                     <BodyTitle className="">The Process</BodyTitle>
                     <ParagraphText
                         style={{ marginTop: "64px" }}
@@ -276,13 +281,12 @@ const Diabetes = () => {
                         quickly using a set of predetermined components to
                         represent different visual elements.
                     </ParagraphText>
-                    <img
-                        loading="lazy"
+                    <ImgWithFallback
                         style={{ marginTop: "64px" }}
-                        alt="Mobile Screenshots"
-                        className="full-bleed"
-                        src={DiabetesType}
-                    ></img>
+                        src={DiabetesTypeWebP}
+                        fallback={DiabetesType}
+                        alt="Typography Choice"
+                    />
                     <BodyTitle className="">The Type Choice</BodyTitle>
                     <ParagraphText
                         style={{ marginTop: "64px" }}
@@ -308,13 +312,12 @@ const Diabetes = () => {
                         features significant quirks that add to the welcoming
                         feel of the type.
                     </ParagraphText>
-                    <img
-                        loading="lazy"
+                    <ImgWithFallback
                         style={{ marginTop: "64px" }}
-                        alt="Colours"
-                        className="full-bleed"
-                        src={ColoursDiabetes}
-                    ></img>
+                        src={ColoursDiabetesWebP}
+                        fallback={ColoursDiabetes}
+                        alt="Colour Choice"
+                    />
                     <BodyTitle className="">The Colours</BodyTitle>
                     <ParagraphText
                         style={{ marginTop: "64px" }}
@@ -333,14 +336,35 @@ const Diabetes = () => {
                         as a result I decided that pastel colours where more
                         likely to give the application a more modern feel.
                     </ParagraphText>
-                    <img
-                        loading="lazy"
+                    <ImgWithFallback
                         style={{ marginTop: "64px" }}
-                        alt="Final Outcomes"
-                        className="full-bleed"
-                        src={FinalDiabetes}
-                    ></img>
+                        src={FinalDiabetesWebP}
+                        fallback={FinalDiabetes}
+                        alt="Colour Choice"
+                    />
                     <BodyTitle className="">The Outcome</BodyTitle>
+                    <ParagraphText
+                        style={{ marginTop: "64px", marginBottom: "64px" }}
+                        className="paragraph"
+                    >
+                        The result of the project was a modern application that
+                        could suitably deal with the needs of the modern
+                        diabetic. It prioritises versatility and mobility, which
+                        ultimately leads to a significant improvement in the day
+                        to day life of a diabetic. <br />
+                        <br />
+                        Having tested the app with diabetics I was able to
+                        refine it further so that it was fulfilling its maximum
+                        potential. The ability to add manual readings went down
+                        especially well and made sure that the application was
+                        suitable to all Type 1 diabetics. <br />
+                        <br />
+                        Upon review, I was pleased with the final outcomes of
+                        the project, from a UX stand point I feel as though all
+                        the user pain points that I had identified with existing
+                        apps had been rectified, as well as new intuitive
+                        features being added.
+                    </ParagraphText>
                 </Wrapper>
             </ThemeProvider>
         </div>

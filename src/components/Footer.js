@@ -37,8 +37,18 @@ const FooterTitle = styled.h3`
 
 const FooterItem = styled.h3`
     margin-bottom: 8px;
+    &:hover {
+        transition: all 0.1s ease-in-out;
+        color: #ff661a !important;
+    }
 `;
 
+const FooterLink = styled.a`
+    &:hover {
+        transition: all 0.1s ease-in-out;
+        color: #ff661a !important;
+    }
+`;
 const FootL = styled.div`
     @media (max-width: 800px) {
         display: none;
@@ -71,7 +81,7 @@ const Footer = () => {
                 <FootL>
                     <FooterTitle>Social Media</FooterTitle>
                     <FooterItem>
-                        <a
+                        <FooterLink
                             className="paragraph"
                             href="https://dribbble.com/PhaseTommy"
                             style={{ textDecoration: "none" }}
@@ -79,10 +89,10 @@ const Footer = () => {
                             rel="noreferrer"
                         >
                             Dribbble
-                        </a>
+                        </FooterLink>
                     </FooterItem>
                     <FooterItem className="paragraph">
-                        <a
+                        <FooterLink
                             className="paragraph"
                             href="https://www.linkedin.com/in/tom-smith-09410a150/"
                             style={{ textDecoration: "none" }}
@@ -90,9 +100,14 @@ const Footer = () => {
                             rel="noreferrer"
                         >
                             LinkedIn
-                        </a>
+                        </FooterLink>
                     </FooterItem>
-                    <FooterItem className="paragraph">The Dots</FooterItem>
+                    <FooterItem
+                        style={{ marginBottom: "0px" }}
+                        className="paragraph"
+                    >
+                        The Dots
+                    </FooterItem>
                 </FootL>
                 <FootM>
                     <FootLogo src={Logo}></FootLogo>
@@ -108,7 +123,10 @@ const Footer = () => {
                     <FooterItem className="paragraph">
                         Phase Robotics App
                     </FooterItem>
-                    <FooterItem className="paragraph">
+                    <FooterItem
+                        style={{ marginBottom: "0px" }}
+                        className="paragraph"
+                    >
                         Redistributing Health
                     </FooterItem>
                 </FootR>

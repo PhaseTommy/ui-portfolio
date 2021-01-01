@@ -1,12 +1,11 @@
 import styled from "styled-components";
 import DiabetesSS from "../assets/diabetes-ss.png";
-
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
 import WorkBG from "../assets/work-bg.png";
 import WorkBGTwo from "../assets/work-bg-2.png";
 
-import WorkArrow from "../assets/WorkArrow.svg";
+import PhaseMock from "../assets/phase-mockup.png";
 
 const WorkWrapper = styled.div`
     margin-left: 20%;
@@ -64,6 +63,7 @@ const DiabetesWrapTwo = styled(motion.div)`
     width: 100%;
     height: 300px;
     padding: 64px;
+    padding-right: 16px;
     border-radius: 16px;
     margin-bottom: 64px;
     position: relative;
@@ -116,6 +116,16 @@ const DiabetesImage = styled.img`
     }
 `;
 
+const PhaseImage = styled.img`
+    width: 340px !important;
+    min-width: 240px !important;
+    width: 16%;
+
+    @media (max-width: 780px) {
+        display: none;
+    }
+`;
+
 const ViewWrap = styled.div`
     display: flex;
     align-items: center;
@@ -125,7 +135,7 @@ const ViewWrap = styled.div`
     border-radius: 8px;
     position: relative;
     margin-top: 32px;
-    width: 88%;
+    width: 240px;
 `;
 
 const ViewText = styled.h4`
@@ -274,7 +284,7 @@ const Work = () => {
                     className="diabetes"
                 >
                     <DiabetesTitleWrap variants={CoverTextMotion}>
-                        <DiabetesTitle>Phase Robotics App</DiabetesTitle>
+                        <DiabetesTitle>Phase Robotics</DiabetesTitle>
                         <DiabetesTitle
                             style={{ opacity: "0.75", fontWeight: "400" }}
                         >
@@ -296,10 +306,10 @@ const Work = () => {
                             </ArrowIcon>
                         </ViewWrap>
                     </DiabetesTitleWrap>
-                    <DiabetesImage
+                    <PhaseImage
                         alt="Diabetes Screenshot"
-                        src={DiabetesSS}
-                    ></DiabetesImage>
+                        src={PhaseMock}
+                    ></PhaseImage>
                 </DiabetesWrapTwo>
             </NavLink>
         </WorkWrapper>

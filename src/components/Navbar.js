@@ -125,16 +125,16 @@ const Navbar = () => {
     const isDesktop = useMediaQuery({ query: "(min-width: 1025px)" });
 
     const [theme, setTheme] = useState(getInitialTheme);
-    const [themeCounter, setThemeCounter] = useState();
+    const [themeCounter, setThemeCounter] = useState(0);
 
     const toggleTheme = () => {
         // if the theme is not light, then set it to dark
-        if (theme === "dark") {
-            setTheme("light");
+        if (theme === "light") {
+            setTheme("dark");
 
             // otherwise, it should be light
         } else {
-            setTheme("dark");
+            setTheme("light");
         }
     };
 
