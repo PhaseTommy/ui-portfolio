@@ -6,11 +6,13 @@ body {
     font-family: "Europa";
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
 }
 
-.wrap {
-    overflow-x: hidden;
+.Appy {
     position: relative;
+
+    overflow-x: hidden;
 }
 
 code {

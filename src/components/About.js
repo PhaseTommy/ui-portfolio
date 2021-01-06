@@ -40,10 +40,22 @@ const AboutWrapper = styled.div`
 `;
 
 const AboutImage = styled(ImgWithFallbackTwo)`
+    @keyframes hover {
+        0% {
+            transform: translate(0px, 0px);
+        }
+        50% {
+            transform: translate(0px, 6px);
+        }
+        100% {
+            transform: translate(0px, 0px);
+        }
+    }
+    animation: hover 2.3s infinite;
     margin-right: 16px;
-
     min-width: 340px;
     max-width: 340px;
+    filter: drop-shadow(0px 30px 51px 5px rgba(0, 0, 0, 0.2));
     @media (max-width: 550px) {
         display: none;
     }
@@ -67,11 +79,37 @@ const ParagraphText = styled.p`
 const LargeTitle = styled.h1`
     font-size: 2.4rem;
     color: #ff661a;
+    @media (max-width: 450px) {
+        font-size: 2rem;
+    }
+`;
+
+const SmallLine = styled.span`
+    width: 60px;
+    height: 2px;
+    border-radius: 40px;
+`;
+
+const SmallTitle = styled.h3`
+    color: #ff661a;
+    margin-left: 16px;
+    @media (max-width: 1024px) {
+        margin-left: 0px;
+        padding: 16px;
+        border-radius: 8px;
+    }
+`;
+
+const SmallWrap = styled.div`
+    display: flex;
+    align-items: center;
+    margin-top: 64px;
+    margin-bottom: 64px;
 `;
 
 const About = () => {
     return (
-        <ContentWrap className="about-bg">
+        <ContentWrap className="">
             <AboutWrapper>
                 <AboutImage
                     className="test"
@@ -80,8 +118,16 @@ const About = () => {
                     alt="About Me Icon"
                 />
                 <AboutInfoWrap>
-                    <LargeTitle>A little bit about me.</LargeTitle>
-                    <ParagraphText className="paragraph">
+                    <SmallWrap>
+                        <SmallLine className="line"></SmallLine>
+                        <SmallTitle className="colored-text">
+                            About Me
+                        </SmallTitle>
+                    </SmallWrap>
+                    <LargeTitle className="case-title">
+                        Meet the person behind the screen.
+                    </LargeTitle>
+                    <ParagraphText className="hero-para">
                         I am a UX/UI designer and front-end developer. I am
                         currently studying Graphic Design at Sheffield Hallam
                         University (Final Year), where I am specialising in User

@@ -53,14 +53,14 @@ const Tags = styled.div`
     font-size: 1rem;
     color: #ff661a;
     padding: 16px 32px;
-    border-radius: 8px;
+    border-radius: 32px;
     margin-bottom: 16px;
     margin-right: 16px;
 
     @media (max-width: 550px) {
         padding: 8px 16px;
         margin-right: 8px;
-        border-radius: 4px;
+        border-radius: 32px;
     }
 `;
 
@@ -78,34 +78,34 @@ const Skills = () => {
             <SkillsWrapper>
                 <SmallWrap>
                     <SmallLine className="line"></SmallLine>
-                    <SmallTitle>My Skills</SmallTitle>
+                    <SmallTitle className="colored-text">My Skills</SmallTitle>
                 </SmallWrap>
                 <TagsWrapper>
-                    <Tags className="tags">#react</Tags>
+                    <Tags className="tags colored-text">#react</Tags>
 
-                    <Tags className="tags">#web-dev</Tags>
+                    <Tags className="tags colored-text">#web-dev</Tags>
 
-                    <Tags className="tags">#css</Tags>
+                    <Tags className="tags colored-text">#css</Tags>
 
-                    <Tags className="tags">#html</Tags>
+                    <Tags className="tags colored-text">#html</Tags>
 
-                    <Tags className="tags">#javascript</Tags>
+                    <Tags className="tags colored-text">#javascript</Tags>
 
-                    <Tags className="tags">#next</Tags>
+                    <Tags className="tags colored-text">#next</Tags>
 
-                    <Tags className="tags">#gatsby</Tags>
+                    <Tags className="tags colored-text">#gatsby</Tags>
 
-                    <Tags className="tags">#ui-design</Tags>
+                    <Tags className="tags colored-text">#ui-design</Tags>
 
-                    <Tags className="tags">#ux-design</Tags>
+                    <Tags className="tags colored-text">#ux-design</Tags>
 
-                    <Tags className="tags">#figma</Tags>
+                    <Tags className="tags colored-text">#figma</Tags>
 
-                    <Tags className="tags">#illustrator</Tags>
+                    <Tags className="tags colored-text">#illustrator</Tags>
 
-                    <Tags className="tags">#protopie</Tags>
+                    <Tags className="tags colored-text">#protopie</Tags>
 
-                    <Tags className="tags">#gatsby</Tags>
+                    <Tags className="tags colored-text">#gatsby</Tags>
                 </TagsWrapper>
             </SkillsWrapper>
         </Content>

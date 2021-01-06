@@ -12,6 +12,11 @@ const NavWrapper = styled(motion.div)`
 
     width: 100%;
     z-index: 5;
+    @media (min-width: 1024px) {
+        width: 440px;
+        /* border-left: 1px solid #ffffff; */
+        right: 0;
+    }
 `;
 
 const NavMain = styled(motion.div)`
@@ -68,9 +73,9 @@ const ContactButton = styled.button`
     padding-right: 24px;
     padding-left: 24px;
     background: #ff661a;
-    border: 1px solid rgba(255, 255, 255, 0.39);
+    border: none;
     box-sizing: border-box;
-    border-radius: 8px;
+    border-radius: 64px;
     font-weight: 700;
     font-size: 0.8rem;
     color: white;
@@ -139,7 +144,7 @@ const MobileNav = () => {
                 className="mobile-nav"
             >
                 <NavTop>
-                    <NavTitle>Case Studies</NavTitle>
+                    <NavTitle className="hero-para">Case Studies</NavTitle>
                     <CloseButton onClick={toggleMenu}>
                         <svg
                             width="12"
@@ -177,7 +182,7 @@ const MobileNav = () => {
                 </NavM>
 
                 <SocialTop>
-                    <NavTitle>Social Media</NavTitle>
+                    <NavTitle className="hero-para">Social Media</NavTitle>
                 </SocialTop>
                 <NavM>
                     <NavItems variants={item} className="nav-item">
@@ -188,7 +193,7 @@ const MobileNav = () => {
                     </NavItems>
                 </NavM>
                 <NavBottom>
-                    <ContactButton className="button-text">
+                    <ContactButton className="mobile-nav-button">
                         Contact Me!
                     </ContactButton>
                 </NavBottom>

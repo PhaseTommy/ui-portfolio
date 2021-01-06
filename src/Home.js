@@ -11,20 +11,22 @@ import Skills from "./components/Skills";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import DesktopMenu from "./components/DesktopMenu";
 
 function Home() {
-    const { mobileNav } = useContext(NavbarContextList);
+    const { mobileNav, desktopNav } = useContext(NavbarContextList);
 
     return (
         <div className="App">
             <Background />
             <Navbar />
+            {desktopNav && <DesktopMenu />}
             <AnimatePresence>
                 {mobileNav && <MobileNav key="menu" />}
             </AnimatePresence>
             <Hero />
-            <Work />
             <About />
+            <Work />
             <Skills />
             <Contact />
             <Footer />

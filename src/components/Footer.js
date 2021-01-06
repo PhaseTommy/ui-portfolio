@@ -9,7 +9,10 @@ import ImgWithFallbackTwo from "../components/ImgWithFallbackTwo";
 const FooterWrap = styled.div`
     width: 100%;
     padding: 64px;
-    margin-top: 300px;
+    margin-top: 64px;
+    @media (max-width: 1024px) {
+        padding: 32px;
+    }
 `;
 
 const FooterContent = styled.div`
@@ -69,7 +72,10 @@ const FootR = styled.div`
 `;
 
 const FootLogo = styled(ImgWithFallbackTwo)`
-    width: 70px;
+    width: 64px;
+    @media (max-width: 1024px) {
+        width: 40px;
+    }
 `;
 
 const LogoText = styled.h3`
@@ -79,7 +85,7 @@ const LogoText = styled.h3`
 
 const Footer = () => {
     return (
-        <FooterWrap className="tags">
+        <FooterWrap className="about-bg">
             <FooterContent>
                 <FootL>
                     <FooterTitle>Social Media</FooterTitle>

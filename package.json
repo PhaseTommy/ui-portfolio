@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^12.1.10",
     "backdropper": "^0.1.2",
     "framer-motion": "^3.1.1",
+    "hamburger-react": "^2.4.0",
     "local-storage-fallback": "^4.1.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",

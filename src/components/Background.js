@@ -8,8 +8,8 @@ import ImgWithFallbackTwo from "./ImgWithFallbackTwo";
 
 const BackgroundImage = styled.div`
     position: absolute;
-    right: -30%;
-    top: -8%;
+    right: 0;
+    top: 0;
     z-index: 0;
     width: 100%;
     @media (max-width: 630px) {
@@ -25,7 +25,7 @@ const MobileImage = styled.div`
 
 const RingBG = styled(ImgWithFallbackTwo)`
     position: absolute;
-    right: 200px;
+    right: 0;
     top: 0;
 `;
 

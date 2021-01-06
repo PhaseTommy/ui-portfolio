@@ -4,25 +4,30 @@ import Backdrop from "../assets/work-bg-2.png";
 import BtnBG from "../assets/contact-bg.png";
 
 const Wrapper = styled.div`
+    margin-left: 20%;
+    margin-right: 20%;
     margin-top: 260px;
-    width: 100%;
-    padding-left: 64px;
-    padding-right: 64px;
-    padding-top: 128px;
-    padding-bottom: 128px;
-    background: #902b2b;
-    background-image: url(${Backdrop});
-    background-size: cover;
-    background-repeat: no-repeat;
+    @media (max-width: 1024px) {
+        flex-direction: column;
+        text-align: center;
+        margin-right: 32px;
+        margin-left: 32px;
+    }
 `;
 
 const Content = styled.div`
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    padding: 32px;
+    border-radius: 16px;
     @media (max-width: 1024px) {
         flex-direction: column;
         text-align: center;
+    }
+    @media (min-width: 1500px) {
+        margin: 0 auto;
+        max-width: 1200px;
     }
 `;
 
@@ -36,7 +41,7 @@ const Title = styled.h1`
 const Subtitle = styled.h3`
     color: white;
     margin-top: 8px;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 500;
 `;
 
@@ -49,7 +54,7 @@ const ContactButton = styled.button`
     /* background: #ffffff; */
     border: none;
     box-sizing: border-box;
-    border-radius: 12px;
+    border-radius: 64px;
     font-weight: 700;
     font-size: 1rem;
     color: #ff661a;
@@ -82,10 +87,10 @@ const ContactButton = styled.button`
 const Contact = () => {
     return (
         <Wrapper>
-            <Content>
+            <Content className="about-bg">
                 <TitleWrap>
-                    <Title>Like what you see?</Title>
-                    <Subtitle>
+                    <Title className="menu-title">Like what you see?</Title>
+                    <Subtitle className="menu-subtitle">
                         Click the contact button to send me a message!
                     </Subtitle>
                 </TitleWrap>

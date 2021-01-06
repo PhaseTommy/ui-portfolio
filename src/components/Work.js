@@ -136,7 +136,7 @@ const ViewWrap = styled.div`
     padding: 12px;
     background: rgba(0, 0, 0, 0.1);
     justify-content: space-between;
-    border-radius: 8px;
+    border-radius: 32px;
     position: relative;
     margin-top: 32px;
     width: 240px;
@@ -239,7 +239,7 @@ const Work = () => {
         <WorkWrapper>
             <SmallWrap>
                 <SmallLine className="line"></SmallLine>
-                <SmallTitle>Work</SmallTitle>
+                <SmallTitle className="colored-text">Work</SmallTitle>
             </SmallWrap>
             <NavLink style={{ textDecoration: "none" }} exactly to="/diabetes">
                 <DiabetesWrap

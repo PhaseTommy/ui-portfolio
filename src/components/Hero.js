@@ -5,7 +5,7 @@ import { useMediaQuery } from "react-responsive";
 const HeroWrapper = styled.div`
     margin-left: 20%;
     margin-right: 20%;
-    margin-top: 200px;
+    margin-top: 140px;
     z-index: 0;
     position: relative;
     user-select: none;
@@ -16,13 +16,16 @@ const HeroWrapper = styled.div`
     }
 
     @media (max-width: 1024px) {
-        display: flex;
+        /* display: flex;
         flex-direction: column;
         align-items: center;
-        text-align: center;
+        text-align: center; */
+        margin-left: 32px;
+        margin-right: 32px;
+        margin-top: 160px;
     }
     @media (max-width: 500px) {
-        margin-top: 150px;
+        margin-top: 100px;
     }
 `;
 
@@ -53,7 +56,7 @@ const SmallTitleMin = styled.h3`
     padding-right: 16px;
     padding-top: 8px;
     padding-bottom: 8px;
-    border-radius: 8px;
+    border-radius: 64px;
 `;
 
 const HeroTitle = styled.h1`
@@ -63,8 +66,8 @@ const HeroTitle = styled.h1`
     @media (max-width: 1024px) {
         width: min(90vw, 28ch);
     }
-    @media (max-width: 500px) {
-        font-size: 2.5rem;
+    @media (max-width: 570px) {
+        font-size: 2.4rem;
     }
 `;
 
@@ -73,6 +76,28 @@ const InfoWrap = styled.div`
     border-radius: 8px;
     display: inline-block;
     margin-top: 32px;
+`;
+
+const HireButton = styled.button`
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border: none;
+    background: #ff661a;
+    border-radius: 64px;
+    margin-top: 32px;
+    font-size: 0.8rem;
+    font-weight: bold;
+`;
+const ParagraphText = styled.p`
+    font-weight: 600;
+    line-height: 180%;
+    margin-top: 32px;
+    width: min(60ch, calc(100% - 64px));
+    @media(max-width: 500px){
+        min(60ch, 100%);
+    }
 `;
 
 const Hero = () => {
@@ -84,24 +109,26 @@ const Hero = () => {
             <SmallWrap>
                 {isDesktop && <SmallLine className="line"></SmallLine>}
                 {isTabletOrMobile && (
-                    <SmallTitleMin className="small-title">
+                    <SmallTitleMin className="small-title colored-text">
                         UI/UX Designer & Engineer
                     </SmallTitleMin>
                 )}
                 {isDesktop && (
-                    <SmallTitle>UI/UX Designer & Engineer</SmallTitle>
+                    <SmallTitle className="colored-text">
+                        UI/UX Designer & Engineer
+                    </SmallTitle>
                 )}
             </SmallWrap>
             <HeroTitle className="hero-title">
-                I build beautiful experiences with human interaction in mind.
+                I build beautiful digital experiences.
             </HeroTitle>
-            {isDesktop && (
-                <InfoWrap className="info-wrap">
-                    <SmallTitleMin>
-                        Interact with the 3D shapes 😃
-                    </SmallTitleMin>
-                </InfoWrap>
-            )}
+            <ParagraphText className="hero-para">
+                I am an experienced designer with knowledge in front-end
+                development giving me a unique skillset to tackle a variety of
+                projects.
+            </ParagraphText>
+
+            <HireButton className="hero-button">Contact Me!</HireButton>
         </HeroWrapper>
     );
 };

@@ -72,7 +72,7 @@ const ReturnBtn = styled.div`
     padding-right: 16px;
     padding-top: 16px;
     padding-bottom: 16px;
-    border-radius: 8px;
+    border-radius: 32px;
     position: fixed;
     right: 16px;
     bottom: 16px;
@@ -86,7 +86,7 @@ const ReturnBtn = styled.div`
 const ModeToggle = styled.button`
     width: 50px;
     height: 50px;
-    border-radius: 8px;
+    border-radius: 32px;
     position: fixed;
     left: 16px;
     bottom: 16px;
@@ -161,7 +161,7 @@ const Diabetes = () => {
             <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
                 <GlobalStyles />
                 <NavLink exactly to="/">
-                    <ReturnBtn className="hero-title toggle">
+                    <ReturnBtn className="contact-btn">
                         <img
                             alt="Back Arrow"
                             style={{ marginRight: "8px" }}
@@ -202,7 +202,9 @@ const Diabetes = () => {
                 </ModeToggle>
                 <Wrapper className="wrapper">
                     <CaseHero>
-                        <CaseTitleSm>Case Study, UI/UX</CaseTitleSm>
+                        <CaseTitleSm className="colored-text">
+                            Case Study, UI/UX
+                        </CaseTitleSm>
                         <CaseTitleLg className="case-title">
                             Living With Diabetes
                         </CaseTitleLg>
@@ -217,7 +219,7 @@ const Diabetes = () => {
                         alt="Mobile Screenshots"
                     />
 
-                    <BodyTitle className="">The Problem</BodyTitle>
+                    <BodyTitle className="colored-text">The Problem</BodyTitle>
                     <QuoteBlock>
                         <CaseTitleLg
                             className="hero-title"
@@ -253,7 +255,7 @@ const Diabetes = () => {
                         fallback={DiabetesWireframes}
                         alt="Mobile Wireframes"
                     />
-                    <BodyTitle className="">The Process</BodyTitle>
+                    <BodyTitle className="colored-text">The Process</BodyTitle>
                     <ParagraphText
                         style={{ marginTop: "64px" }}
                         className="paragraph"
@@ -287,7 +289,9 @@ const Diabetes = () => {
                         fallback={DiabetesType}
                         alt="Typography Choice"
                     />
-                    <BodyTitle className="">The Type Choice</BodyTitle>
+                    <BodyTitle className="colored-text">
+                        The Type Choice
+                    </BodyTitle>
                     <ParagraphText
                         style={{ marginTop: "64px" }}
                         className="paragraph"
@@ -318,7 +322,7 @@ const Diabetes = () => {
                         fallback={ColoursDiabetes}
                         alt="Colour Choice"
                     />
-                    <BodyTitle className="">The Colours</BodyTitle>
+                    <BodyTitle className="colored-text">The Colours</BodyTitle>
                     <ParagraphText
                         style={{ marginTop: "64px" }}
                         className="paragraph"
@@ -342,7 +346,7 @@ const Diabetes = () => {
                         fallback={FinalDiabetes}
                         alt="Colour Choice"
                     />
-                    <BodyTitle className="">The Outcome</BodyTitle>
+                    <BodyTitle className="colored-text">The Outcome</BodyTitle>
                     <ParagraphText
                         style={{ marginTop: "64px", marginBottom: "64px" }}
                         className="paragraph"
