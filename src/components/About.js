@@ -6,15 +6,24 @@ import ImgWithFallbackTwo from "../components/ImgWithFallbackTwo";
 
 const ContentWrap = styled.section`
     padding: 64px 32px;
+    width: 100% !important;
 
-    width: 100%;
     margin-top: 300px;
+
     @media (max-width: 1024px) {
         margin-top: 180px;
     }
     @media (max-width: 550px) {
         padding-left: 0px;
         padding-right: 0px;
+    }
+    &:before {
+        content: "";
+        width: 100%;
+        height: 8px;
+        background: blue;
+        bottom: 0;
+        left: 0;
     }
 `;
 
@@ -74,7 +83,7 @@ const AboutInfoWrap = styled.div`
 const ParagraphText = styled.p`
     font-weight: 600;
     line-height: 180%;
-    margin-top: 64px;
+    margin-top: 32px;
 `;
 const LargeTitle = styled.h1`
     font-size: 2.4rem;
@@ -103,13 +112,16 @@ const SmallTitle = styled.h3`
 const SmallWrap = styled.div`
     display: flex;
     align-items: center;
-    margin-top: 64px;
-    margin-bottom: 64px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    @media (max-width: 1024px) {
+        margin-bottom: 16px;
+    }
 `;
 
 const About = () => {
     return (
-        <ContentWrap className="">
+        <ContentWrap className="about-bg">
             <AboutWrapper>
                 <AboutImage
                     className="test"

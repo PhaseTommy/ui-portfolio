@@ -128,7 +128,12 @@ const Hero = () => {
                 projects.
             </ParagraphText>
 
-            <HireButton className="hero-button">Contact Me!</HireButton>
+            <a
+                style={{ textDecoration: "none", color: "inherit" }}
+                href="mailto:tom@smithmail.net"
+            >
+                <HireButton className="hero-button">Contact Me!</HireButton>
+            </a>
         </HeroWrapper>
     );
 };

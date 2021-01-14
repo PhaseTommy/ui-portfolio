@@ -155,6 +155,10 @@ export const GlobalStyles = createGlobalStyle`
 
     color: ${({ theme }) => theme.body} !important; 
     background: ${({ theme }) => theme.primaryText} !important; 
+    &:hover{
+        transition: all 0.2s ease-in-out;
+        background: ${({ theme }) => theme.flipped} !important; 
+    }
 }
 
 .mobile-nav-button{
@@ -194,6 +198,24 @@ export const GlobalStyles = createGlobalStyle`
 
 .divider{
     background: ${({ theme }) => theme.body}; 
+}
+
+.background-skew{
+
+    background: ${({ theme }) => theme.primaryText}; 
+
+}
+
+.skills-card{
+    /* border: 1px solid ${({ theme }) => theme.body}; */
+}
+
+.svg-switch{
+    fill: ${({ theme }) => theme.primary};
+}
+
+.svg-switch-two{
+    fill: ${({ theme }) => theme.body};
 }
 
 .nav-buttons:hover > svg{

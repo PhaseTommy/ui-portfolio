@@ -162,11 +162,21 @@ const Diabetes = () => {
                 <GlobalStyles />
                 <NavLink exactly to="/">
                     <ReturnBtn className="contact-btn">
-                        <img
-                            alt="Back Arrow"
+                        <svg
                             style={{ marginRight: "8px" }}
-                            src={BackArrow}
-                        ></img>
+                            className="svg-switch-two"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM8.7071 5.70711C9.0976 5.31658 9.0976 4.68342 8.7071 4.29289C8.3166 3.90237 7.68342 3.90237 7.29289 4.29289L4.29289 7.29289C3.90237 7.68342 3.90237 8.3166 4.29289 8.7071L7.29289 11.7071C7.68342 12.0976 8.3166 12.0976 8.7071 11.7071C9.0976 11.3166 9.0976 10.6834 8.7071 10.2929L7.41421 9H11C11.5523 9 12 8.5523 12 8C12 7.44772 11.5523 7 11 7H7.41421L8.7071 5.70711Z"
+                            />
+                        </svg>
                         Back To Projects
                     </ReturnBtn>
                 </NavLink>

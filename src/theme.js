@@ -11,6 +11,7 @@ export const lightTheme = {
     darker: "#E8E7E7",
     accent: "#F8F8F8",
     shadow: "rgba(0, 0, 0, 0.15)",
+    flipped: "#1D2225",
 };
 
 export const darkTheme = {
@@ -28,4 +29,5 @@ export const darkTheme = {
     border: "#222C36",
     accent: "#101214",
     shadow: "#131111",
+    flipped: "#F2F2F2",
 };

@@ -193,9 +193,14 @@ const MobileNav = () => {
                     </NavItems>
                 </NavM>
                 <NavBottom>
-                    <ContactButton className="mobile-nav-button">
-                        Contact Me!
-                    </ContactButton>
+                    <a
+                        href="mailto:tom@smithmail.net"
+                        style={{ textDecoration: "none", color: "inherit" }}
+                    >
+                        <ContactButton className="mobile-nav-button">
+                            Contact Me!
+                        </ContactButton>
+                    </a>
                 </NavBottom>
             </NavMain>
         </NavWrapper>
