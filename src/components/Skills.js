@@ -159,9 +159,10 @@ const Skills = () => {
                         Professionalism and punctuality.
                     </InfoTitle>
                     <InfoText className="menu-subtitle">
-                        I provide thorough creative input and flair in
-                        everything I create; through a background and years of
-                        experience in designing beautiful interfaces.
+                        You can rely on me to provide both a professional and
+                        punctual service. Deadlines are consistently met
+                        throughout a project with the highest quality design
+                        work.
                     </InfoText>
                 </InfoItem>
                 <InfoItem className="skills-card">
@@ -184,9 +185,9 @@ const Skills = () => {
                         Refined development skills
                     </InfoTitle>
                     <InfoText className="menu-subtitle">
-                        I provide thorough creative input and flair in
-                        everything I create; through a background and years of
-                        experience in designing beautiful interfaces.
+                        I have a great understanding of web development; as a
+                        result I am able to streamline the design process so
+                        that the assets are easy to work with for developers.
                     </InfoText>
                 </InfoItem>
                 {/* 

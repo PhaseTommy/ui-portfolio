@@ -49,12 +49,8 @@ const FooterItem = styled.h3`
     }
 `;
 
-const FooterLink = styled.a`
-    &:hover {
-        transition: all 0.1s ease-in-out;
-        color: #ff661a !important;
-    }
-`;
+const FooterLink = styled.a``;
+
 const FootL = styled.div`
     @media (max-width: 800px) {
         display: none;
@@ -125,11 +121,11 @@ const Footer = () => {
                 <FootR>
                     <FooterTitle>Navigation</FooterTitle>
                     <NavLink to="/diabetes" style={{ textDecoration: "none" }}>
-                        <FooterItem className="paragraph">
+                        <FooterItem className="paragraph case-link">
                             Living With Diabetes
                         </FooterItem>
                     </NavLink>
-                    <FooterItem className="paragraph">
+                    <FooterItem className="paragraph case-link">
                         Phase Robotics App
                     </FooterItem>
                     <FooterItem

@@ -253,7 +253,7 @@ const Navbar = () => {
                                         fill-rule="evenodd"
                                         clip-rule="evenodd"
                                         d="M1 0C0.447715 0 0 0.447715 0 1C0 1.55228 0.447715 2 1 2H15C15.5523 2 16 1.55228 16 1C16 0.447715 15.5523 0 15 0H1ZM1 8C0.447715 8 0 8.44771 0 9C0 9.55229 0.447715 10 1 10H15C15.5523 10 16 9.55229 16 9C16 8.44771 15.5523 8 15 8H1Z"
-                                        fill="none"
+                                        fill="#ffffff"
                                         className="toggle-icon-fill"
                                     />
                                 </svg>

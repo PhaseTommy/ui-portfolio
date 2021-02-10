@@ -157,9 +157,11 @@ export const GlobalStyles = createGlobalStyle`
     background: ${({ theme }) => theme.primaryText} !important; 
     &:hover{
         transition: all 0.2s ease-in-out;
-        background: ${({ theme }) => theme.flipped} !important; 
+        background: ${({ theme }) => theme.primary} !important; 
+        color: ${({ theme }) => theme.body} !important; 
+
     }
-}
+} 
 
 .mobile-nav-button{
 
@@ -221,6 +223,50 @@ export const GlobalStyles = createGlobalStyle`
 .nav-buttons:hover > svg{
 
        fill:  ${({ theme }) => theme.primary}
- 
+}
+a:hover{
+        color: ${({ theme }) => theme.primary} !important; 
+    
+}
+
+.case-link:hover{
+        color: ${({ theme }) => theme.primary} !important; 
+    
+}
+
+.hero-button{
+    animation: 1s in ease-in-out;
+}
+
+.hero-button:hover{
+    animation: 1s out ease-in-out;
+}
+
+@keyframes in {
+    from {
+         color: ${({ theme }) => theme.body} !important; 
+    background: ${({ theme }) => theme.primaryText} !important; 
+    }
+
+    to{
+        background: ${({ theme }) => theme.primary} !important; 
+        color: ${({ theme }) => theme.body} !important; 
+     }
+} ;
+
+@keyframes out {
+    from {
+         background: ${({ theme }) => theme.primary} !important; 
+        color: ${({ theme }) => theme.body} !important; 
+         
+    }
+
+    to{
+       color: ${({ theme }) => theme.body} !important; 
+    background: ${({ theme }) => theme.primaryText} !important; 
+     }
+} ;
+
+
 
 `;

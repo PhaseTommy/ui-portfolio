@@ -1,4 +1,5 @@
 import BackgroundIMG from "../assets/scene.png";
+import BackgroundIMGWebP from "../assets/scene.webp";
 import CircleBG from "../assets/background.png";
 import CircleBGWebP from "../assets/background.webp";
 
@@ -40,6 +41,13 @@ const DarkBG = styled.div`
     z-index: -3;
 `;
 
+const BackgroundImageLeft = styled(ImgWithFallbackTwo)`
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 600px;
+`;
+
 const DarkBGWrap = styled.div``;
 
 const Background = () => {
@@ -58,6 +66,11 @@ const Background = () => {
                             alt="Ring Background Image"
                         ></RingBG>
                     </BackgroundImage>
+                    <BackgroundImageLeft
+                        src={BackgroundIMGWebP}
+                        fallback={BackgroundIMG}
+                        alt="3D Objects Background"
+                    ></BackgroundImageLeft>
                 </>
             )}
 

@@ -153,6 +153,16 @@ const SmallLine = styled.span`
     border-radius: 40px;
 `;
 
+const LargeTitle = styled.h1`
+    font-size: 2.4rem;
+    color: #ff661a;
+    margin-bottom: 32px;
+
+    @media (max-width: 450px) {
+        font-size: 2rem;
+    }
+`;
+
 const SmallTitle = styled.h3`
     color: #ff661a;
     margin-left: 16px;
@@ -167,7 +177,7 @@ const SmallWrap = styled.div`
     display: flex;
     align-items: center;
     margin-top: 64px;
-    margin-bottom: 64px;
+    margin-bottom: 32px;
 `;
 
 const ArrowIcon = styled.svg`
@@ -241,6 +251,9 @@ const Work = () => {
                 <SmallLine className="line"></SmallLine>
                 <SmallTitle className="colored-text">Work</SmallTitle>
             </SmallWrap>
+            <LargeTitle className="case-title">
+                A selection of some of my favourite work.
+            </LargeTitle>
             <NavLink style={{ textDecoration: "none" }} exactly to="/diabetes">
                 <DiabetesWrap
                     initial="rest"

@@ -4,9 +4,12 @@ import Backdrop from "../assets/work-bg-2.png";
 import BtnBG from "../assets/contact-bg.png";
 
 const Wrapper = styled.div`
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 12%;
+    margin-right: 12%;
     margin-top: 260px;
+    padding-left: 48px;
+    padding-right: 48px;
+
     @media (max-width: 1024px) {
         flex-direction: column;
         text-align: center;
@@ -19,8 +22,7 @@ const Content = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 32px;
-    border-radius: 16px;
+
     @media (max-width: 1024px) {
         flex-direction: column;
         text-align: center;
@@ -87,7 +89,7 @@ const ContactButton = styled.button`
 const Contact = () => {
     return (
         <Wrapper>
-            <Content className="about-bg">
+            <Content className="">
                 <TitleWrap>
                     <Title className="menu-title">Like what you see?</Title>
                     <Subtitle className="menu-subtitle">
