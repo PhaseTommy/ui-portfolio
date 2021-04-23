@@ -38,13 +38,39 @@ const NavM = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+
+    border-radius: 40px;
+    padding: 8px;
+    padding-left: 24px;
+    padding-right: 24px;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    @media (max-width: 500px) {
+        display: none;
+    }
 `;
 const NavR = styled.div`
     display: flex;
     align-items: center;
-    @media (min-width: 1025px) {
-        display: none;
-    }
+    justify-content: center;
+`;
+
+const SlashButton = styled.div`
+    width: 32px;
+    height: 32px;
+
+    border: 1px solid rgba(190, 190, 190, 0.05);
+    box-sizing: border-box;
+
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 12px;
+    margin-right: 12px;
+    font-size: 12px;
+    font-weight: 800;
 `;
 
 const BrandTitle = styled.h2`
@@ -181,7 +207,14 @@ const Navbar = () => {
                         </BrandTitle>
                     </NavL>
 
-                    <NavM>
+                    <NavM className="slash-button">
+                        Press the{" "}
+                        <SlashButton className="slash">
+                            <strong>C</strong>
+                        </SlashButton>
+                        key to book in!
+                    </NavM>
+                    <NavR>
                         <ToggleThemeBtn
                             onClick={toggleTheme}
                             className="nav-buttons"
@@ -259,7 +292,7 @@ const Navbar = () => {
                                 </svg>
                             </MobileMenuButton>
                         )}
-                    </NavM>
+                    </NavR>
                 </NavWrapper>
             </Headroom>
         </ThemeProvider>

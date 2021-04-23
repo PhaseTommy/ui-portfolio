@@ -9,9 +9,13 @@ export const lightTheme = {
     tertiary: "#ffffff",
     border: "#DBD5E7",
     darker: "#E8E7E7",
+    fourth: "#f8f8f8",
     accent: "#F8F8F8",
     shadow: "rgba(0, 0, 0, 0.15)",
     flipped: "#1D2225",
+    cursor: "url('./assets/light-mode-cursor.png'), auto !important",
+    slash: "#ffffff",
+    puller: "#E5E5E5",
 };
 
 export const darkTheme = {
@@ -26,8 +30,12 @@ export const darkTheme = {
     secondaryBorder: "#293642",
     profileInput: "#25303C",
     profileStore: "#192129",
+    fourth: "#0F1113",
     border: "#222C36",
     accent: "#101214",
-    shadow: "#131111",
+    shadow: "#090A0B",
     flipped: "#F2F2F2",
+    cursor: "url('./assets/dark-mode-cursor.png'), auto !important",
+    slash: "#1d2225",
+    puller: "#282F33",
 };

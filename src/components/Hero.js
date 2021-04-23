@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import { useMediaQuery } from "react-responsive";
+import { motion } from "framer-motion";
+import { NavbarContextList } from "../context/NavbarContext";
 
 const HeroWrapper = styled.div`
     margin-left: 20%;
@@ -78,7 +80,7 @@ const InfoWrap = styled.div`
     margin-top: 32px;
 `;
 
-const HireButton = styled.button`
+const HireButton = styled(motion.button)`
     padding-left: 24px;
     padding-right: 24px;
     padding-top: 12px;
@@ -104,6 +106,8 @@ const Hero = () => {
     const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1024px)" });
     const isDesktop = useMediaQuery({ query: "(min-width: 1025px)" });
 
+    const { contactForm, setContactForm } = useContext(NavbarContextList);
+
     return (
         <HeroWrapper>
             <SmallWrap>
@@ -128,12 +132,13 @@ const Hero = () => {
                 projects.
             </ParagraphText>
 
-            <a
-                style={{ textDecoration: "none", color: "inherit" }}
-                href="mailto:tom@smithmail.net"
+            <HireButton
+                onClick={() => setContactForm(true)}
+                animation={{ scale: 1.2 }}
+                className="hero-button"
             >
-                <HireButton className="hero-button">Contact Me!</HireButton>
-            </a>
+                Contact Me!
+            </HireButton>
         </HeroWrapper>
     );
 };

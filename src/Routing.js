@@ -3,6 +3,7 @@ import Home from "./Home";
 import Diabetes from "./Diabetes";
 import NavbarContextListProvider from "./context/NavbarContext";
 import ScrollToTop from "./components/ScrollToTop";
+import Ballr from "./Ballr";
 
 const Routing = () => {
     return (
@@ -12,6 +13,7 @@ const Routing = () => {
                 <Switch>
                     <Route exact path="/" component={Home}></Route>
                     <Route exact path="/diabetes" component={Diabetes}></Route>
+                    <Route exact path="/ballr" component={Ballr}></Route>
                 </Switch>
             </Router>
         </NavbarContextListProvider>

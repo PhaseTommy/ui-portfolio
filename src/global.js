@@ -22,6 +22,8 @@ export const GlobalStyles = createGlobalStyle`
 
 }
 
+
+
 .mobile-nav{
     background: ${({ theme }) => theme.body};    
     @media(min-width: 1025px){
@@ -242,6 +244,64 @@ a:hover{
     animation: 1s out ease-in-out;
 }
 
+.external-link-text{
+    color: ${({ theme }) => theme.secondaryText}; 
+    
+
+}
+.slash-button{
+    background-color: ${({ theme }) => theme.fourth};
+    color: ${({ theme }) => theme.primaryText};
+}
+
+.slash{
+    background: ${({ theme }) => theme.slash} !important;
+    color: ${({ theme }) => theme.primary}
+}
+
+
+a {
+    text-decoration: none;
+}
+
+.external-icon{
+  fill: ${({ theme }) => theme.primaryText};
+}
+
+.external-link:focus{
+    border: 1px solid ${({ theme }) => theme.toggleBorder};
+    outline: none;
+}
+
+.external-link{
+    background: ${({ theme }) => theme.secondary}; 
+
+  }
+  
+  .contact-mobile{
+      background: ${({ theme }) => theme.fourth};
+      box-shadow: 0px -15px 55px ${({ theme }) => theme.fourth};
+      border: 1px solid ${({ theme }) => theme.toggleBorder}
+  }
+
+  .contact-mobile-animated {
+      animation: mobile-contact 0.5s forwards;
+      background: ${({ theme }) => theme.fourth};
+      box-shadow: 0px -15px 55px ${({ theme }) => theme.fourth};
+      border: 1px solid ${({ theme }) => theme.toggleBorder}
+  }
+
+  .mobile-pull{
+      background: ${({ theme }) => theme.puller};
+
+  }
+
+  @keyframes mobile-contact {
+  0%   { bottom: -400px; }
+  100% { bottom: 0px; }
+}
+
+  
 @keyframes in {
     from {
          color: ${({ theme }) => theme.body} !important; 
@@ -267,6 +327,34 @@ a:hover{
      }
 } ;
 
+.submit-btn{
+    color: ${({ theme }) => theme.flipped} !important;
+    background: ${({ theme }) => theme.primaryText}
+}
+
+.contact-input{
+    background: ${({ theme }) => theme.secondary};
+    color: ${({ theme }) => theme.primaryText};
+    outline: none !important;
+    border: 1px solid ${({ theme }) => theme.toggleBorder}
+}
+
+.contact-close{
+    fill: ${({ theme }) => theme.primaryText}
+}
+
+.case-nav{
+    background: ${({ theme }) => theme.secondary};
+    color: ${({ theme }) => theme.primaryText};
+}
+
+.case-arrow{
+    fill: ${({ theme }) => theme.primaryText}
+}
+
+.case-toggle{
+    background: ${({ theme }) => theme.body}
+}
 
 
 `;
