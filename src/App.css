@@ -52,6 +52,12 @@ iframe {
     grid-column: 1 / 4;
 }
 
+.half-bleed {
+    width: 100%;
+    grid-column: 2 / 3;
+    border-radius: 8px;
+}
+
 #canvas3d {
     @media (max-width: 1086px) {
         width: 100vw !important;

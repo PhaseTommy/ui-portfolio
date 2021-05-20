@@ -46,7 +46,7 @@ const NavM = styled.div`
     color: white;
     font-size: 14px;
     font-weight: 600;
-    @media (max-width: 500px) {
+    @media (max-width: 700px) {
         display: none;
     }
 `;
@@ -151,9 +151,8 @@ const HamburgerWrap = styled.div`
 `;
 
 const Navbar = () => {
-    const { setMobileNav, mobileNav, desktopNav, setDesktopNav } = useContext(
-        NavbarContextList
-    );
+    const { setMobileNav, mobileNav, desktopNav, setDesktopNav } =
+        useContext(NavbarContextList);
 
     const getInitialTheme = () => {
         const savedTheme = storage.getItem("theme");
@@ -212,7 +211,7 @@ const Navbar = () => {
                         <SlashButton className="slash">
                             <strong>C</strong>
                         </SlashButton>
-                        key to book in!
+                        key to contact me!
                     </NavM>
                     <NavR>
                         <ToggleThemeBtn

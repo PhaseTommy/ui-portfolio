@@ -6,6 +6,7 @@ import storage from "local-storage-fallback";
 import styled from "styled-components";
 import DiabetesHeader from "./assets/diabetes-header.png";
 import DiabetesHeaderWebP from "./assets/diabetes-header.webp";
+import { motion } from "framer-motion";
 
 import BackArrow from "./assets/back-arrow.svg";
 import { NavLink } from "react-router-dom";
@@ -28,8 +29,14 @@ import ImgWithFallback from "./components/ImgWithFallback";
 const Wrapper = styled.div``;
 
 const CaseHero = styled.div`
-    margin-top: 64px;
+    margin-top: 80px;
     margin-bottom: 64px;
+`;
+
+const SmallTitle = styled.h3`
+    font-size: 1.2rem;
+
+    font-weight: 700;
 `;
 
 const CaseTitleSm = styled.h3`
@@ -48,6 +55,7 @@ const CaseTitleLg = styled.h1`
 const CaseSubtitle = styled.h3`
     text-align: center;
     margin-top: 16px;
+    font-family: "Nunito Sans";
 `;
 
 const BodyTitle = styled.h2`
@@ -97,9 +105,14 @@ const ModeToggle = styled.button`
 `;
 
 const ParagraphText = styled.p`
-    font-family: "Merriweather";
-    font-weight: 400;
+    font-family: "Nunito Sans";
+    font-weight: 600;
     line-height: 180%;
+
+    font-size: 1rem;
+    @media (min-width: 1500px) {
+        font-size: 1.1rem;
+    }
 `;
 
 const MoonIcon = styled.path`
@@ -115,11 +128,33 @@ const SunIcon = styled.path`
     transition: all 0.1s ease-in-out;
     @media (min-width: 1025px) {
         ${ModeToggle}:hover & {
-            fill: #ff661a;
+            fill: #734ee2;
         }
     }
 `;
 
+const ExternalLink = styled(motion.div)`
+    padding: 16px;
+    display: flex;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+`;
+const ExternalIcon = styled(motion.svg)`
+    ${ExternalLink}:hover & {
+        transition: fill ease-in-out 0.2s;
+        fill: #e57a44;
+    }
+`;
+
+const ExternalLinkText = styled(motion.h4)`
+    font-weight: 500;
+    ${ExternalLink}:hover & {
+        transition: all ease-in-out 0.2s;
+        color: #e57a44;
+    }
+`;
 const Diabetes = () => {
     const getInitialTheme = () => {
         const savedTheme = storage.getItem("theme");
@@ -186,6 +221,7 @@ const Diabetes = () => {
                             width="16"
                             height="16"
                             viewBox="0 0 16 16"
+                            fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                         >
                             <MoonIcon
@@ -198,7 +234,6 @@ const Diabetes = () => {
                             width="16"
                             height="16"
                             viewBox="0 0 16 16"
-                            fill="none"
                             xmlns="http://www.w3.org/2000/svg"
                         >
                             <SunIcon

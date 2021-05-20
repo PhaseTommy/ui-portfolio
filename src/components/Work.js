@@ -11,6 +11,9 @@ import ImgWithFallbackTwo from "./ImgWithFallbackTwo";
 import PhaseMock from "../assets/phase-mockup.png";
 import PhaseMockWebP from "../assets/phase-mockup.webp";
 
+import BallrPreview from "../assets/ballr-preview.png";
+import BallrPreviewWebP from "../assets/ballr-preview.webp";
+
 const WorkWrapper = styled.div`
     margin-left: 20%;
     margin-right: 20%;
@@ -121,9 +124,11 @@ const DiabetesImage = styled(ImgWithFallbackTwo)`
 `;
 
 const PhaseImage = styled(ImgWithFallbackTwo)`
-    width: 340px !important;
-    min-width: 240px !important;
-    width: 16%;
+    position: relative;
+    height: 284px;
+    margin-top: 21px;
+    left: 16px;
+    border-bottom-right-radius: 16px;
 
     @media (max-width: 780px) {
         display: none;
@@ -196,13 +201,11 @@ const ArrowIcon = styled.svg`
     ${DiabetesWrap}:hover & {
         animation: arrow-move 1s infinite;
         transition: fill 0.4s ease-in-out;
-        fill: orange;
     }
 
     ${DiabetesWrapTwo}:hover & {
         animation: arrow-move 1s infinite;
         transition: fill 0.4s ease-in-out;
-        fill: orange;
     }
 `;
 
@@ -255,6 +258,49 @@ const Work = () => {
                 <LargeTitle className="case-title">
                     A selection of some of my favourite work.
                 </LargeTitle>
+
+                <NavLink style={{ textDecoration: "none" }} exactly to="/ballr">
+                    <DiabetesWrapTwo
+                        initial="rest"
+                        whileHover="hover"
+                        animate="rest"
+                        variants={DiabetesMain}
+                        className="diabetes"
+                    >
+                        <DiabetesTitleWrap variants={CoverTextMotion}>
+                            <DiabetesTitle>Ballr Statistics</DiabetesTitle>
+                            <DiabetesTitle
+                                style={{
+                                    opacity: "0.75",
+                                    fontWeight: "400",
+                                }}
+                            >
+                                Web Interface
+                            </DiabetesTitle>
+                            <ViewWrap>
+                                <ViewText>View the full case study</ViewText>
+                                <ArrowIcon
+                                    width="16"
+                                    height="16"
+                                    viewBox="0 0 16 16"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    className="arrow"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        clip-rule="evenodd"
+                                        d="M-3.49691e-07 8C-5.42821e-07 12.4183 3.5817 16 8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 -1.56562e-07 8 -3.49691e-07C3.5817 -5.42821e-07 -1.56562e-07 3.58172 -3.49691e-07 8ZM8.70711 11.7071L11.7071 8.7071C12.0976 8.3166 12.0976 7.68342 11.7071 7.29289L8.70711 4.29289C8.31658 3.90237 7.6834 3.90237 7.2929 4.29289C6.9024 4.68342 6.9024 5.31658 7.2929 5.70711L8.58579 7L5 7C4.4477 7 4 7.44771 4 8C4 8.5523 4.4477 9 5 9L8.58579 9L7.2929 10.2929C6.9024 10.6834 6.9024 11.3166 7.2929 11.7071C7.6834 12.0976 8.31658 12.0976 8.70711 11.7071Z"
+                                    />
+                                </ArrowIcon>
+                            </ViewWrap>
+                        </DiabetesTitleWrap>
+                        <PhaseImage
+                            alt="Diabetes Screenshot"
+                            src={BallrPreviewWebP}
+                            fallback={BallrPreview}
+                        ></PhaseImage>
+                    </DiabetesWrapTwo>
+                </NavLink>
                 <NavLink
                     style={{ textDecoration: "none" }}
                     exactly
@@ -284,6 +330,7 @@ const Work = () => {
                                     height="16"
                                     viewBox="0 0 16 16"
                                     xmlns="http://www.w3.org/2000/svg"
+                                    className="arrow"
                                 >
                                     <path
                                         fill-rule="evenodd"
@@ -299,48 +346,6 @@ const Work = () => {
                             fallback={DiabetesSS}
                         ></DiabetesImage>
                     </DiabetesWrap>
-                </NavLink>
-
-                <NavLink style={{ textDecoration: "none" }} exactly to="/ballr">
-                    <DiabetesWrapTwo
-                        initial="rest"
-                        whileHover="hover"
-                        animate="rest"
-                        variants={DiabetesMain}
-                        className="diabetes"
-                    >
-                        <DiabetesTitleWrap variants={CoverTextMotion}>
-                            <DiabetesTitle>Ballr Statistics</DiabetesTitle>
-                            <DiabetesTitle
-                                style={{
-                                    opacity: "0.75",
-                                    fontWeight: "400",
-                                }}
-                            >
-                                Web Interface
-                            </DiabetesTitle>
-                            <ViewWrap>
-                                <ViewText>View the full case study</ViewText>
-                                <ArrowIcon
-                                    width="16"
-                                    height="16"
-                                    viewBox="0 0 16 16"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        fill-rule="evenodd"
-                                        clip-rule="evenodd"
-                                        d="M-3.49691e-07 8C-5.42821e-07 12.4183 3.5817 16 8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 -1.56562e-07 8 -3.49691e-07C3.5817 -5.42821e-07 -1.56562e-07 3.58172 -3.49691e-07 8ZM8.70711 11.7071L11.7071 8.7071C12.0976 8.3166 12.0976 7.68342 11.7071 7.29289L8.70711 4.29289C8.31658 3.90237 7.6834 3.90237 7.2929 4.29289C6.9024 4.68342 6.9024 5.31658 7.2929 5.70711L8.58579 7L5 7C4.4477 7 4 7.44771 4 8C4 8.5523 4.4477 9 5 9L8.58579 9L7.2929 10.2929C6.9024 10.6834 6.9024 11.3166 7.2929 11.7071C7.6834 12.0976 8.31658 12.0976 8.70711 11.7071Z"
-                                    />
-                                </ArrowIcon>
-                            </ViewWrap>
-                        </DiabetesTitleWrap>
-                        <PhaseImage
-                            alt="Diabetes Screenshot"
-                            src={PhaseMockWebP}
-                            fallback={PhaseMock}
-                        ></PhaseImage>
-                    </DiabetesWrapTwo>
                 </NavLink>
             </WorkWrapper>
         </AnimatePresence>

@@ -75,18 +75,19 @@ const ContactButton = styled.button`
     background: #ff661a;
     border: none;
     box-sizing: border-box;
-    border-radius: 64px;
+
     font-weight: 700;
     font-size: 0.8rem;
     color: white;
     width: 100%;
+    height: 100%;
 `;
 
 const NavBottom = styled.div`
-    padding-left: 32px;
-    padding-right: 32px;
+    /* padding-left: 32px;
+    padding-right: 32px; */
     position: absolute;
-    bottom: 32px;
+    bottom: 0px;
     width: 100%;
 `;
 
@@ -166,19 +167,23 @@ const MobileNav = () => {
                     <NavLink
                         onClick={toggleMenu}
                         exactly
+                        to="/ballr"
+                        style={{ textDecoration: "none" }}
+                    >
+                        <NavItems variants={item} className="nav-item">
+                            Ballr
+                        </NavItems>
+                    </NavLink>
+                    <NavLink
+                        onClick={toggleMenu}
+                        exactly
                         to="/diabetes"
                         style={{ textDecoration: "none" }}
                     >
                         <NavItems variants={item} className="nav-item">
-                            Living with Diabetes
+                            Living With Diabetes
                         </NavItems>
                     </NavLink>
-                    <NavItems variants={item} className="nav-item">
-                        About Me
-                    </NavItems>
-                    <NavItems variants={item} className="nav-item">
-                        Skills
-                    </NavItems>
                 </NavM>
 
                 <SocialTop>
@@ -186,10 +191,24 @@ const MobileNav = () => {
                 </SocialTop>
                 <NavM>
                     <NavItems variants={item} className="nav-item">
-                        LinkedIn
+                        <a
+                            style={{ color: "inherit" }}
+                            href="https://www.linkedin.com/in/tom-smith-09410a150/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            LinkedIn
+                        </a>
                     </NavItems>
                     <NavItems variants={item} className="nav-item">
-                        Dribble
+                        <a
+                            style={{ color: "inherit" }}
+                            href="https://dribbble.com/PhaseTommy"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Dribbble
+                        </a>
                     </NavItems>
                 </NavM>
                 <NavBottom>
@@ -198,7 +217,7 @@ const MobileNav = () => {
                         style={{ textDecoration: "none", color: "inherit" }}
                     >
                         <ContactButton className="mobile-nav-button">
-                            Contact Me!
+                            Send a Quick Email!
                         </ContactButton>
                     </a>
                 </NavBottom>

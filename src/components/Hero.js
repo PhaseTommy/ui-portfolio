@@ -124,7 +124,7 @@ const Hero = () => {
                 )}
             </SmallWrap>
             <HeroTitle className="hero-title">
-                I build beautiful digital experiences.
+                I design & build beautiful digital experiences.
             </HeroTitle>
             <ParagraphText className="hero-para">
                 I am an experienced designer with knowledge in front-end

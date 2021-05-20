@@ -143,10 +143,11 @@ const About = () => {
                         I am a UX/UI designer and front-end developer. I am
                         currently studying Graphic Design at Sheffield Hallam
                         University (Final Year), where I am specialising in User
-                        Experience this year. I already have great understanding
-                        of the entire product development process, and believe
-                        that my skills as a designer and my understanding of the
-                        development process give me a unique skillset. <br />
+                        Experience this year. I already have a good
+                        understanding of the product development process, and
+                        believe that my skills as a designer and my
+                        understanding of the development process give me a
+                        unique skillset. <br />
                         <br />
                         Since the age of 17 I have been working freelance on a
                         range of products that have refined and developed my

@@ -144,7 +144,8 @@ export const GlobalStyles = createGlobalStyle`
 }
 
 .hero-para{
-    color: ${({ theme }) => theme.secondaryText} !important; 
+    color: ${({ theme }) => theme.primaryText} !important; 
+    font-weight: 500;
 }
 
 .colored-text{
@@ -167,8 +168,8 @@ export const GlobalStyles = createGlobalStyle`
 
 .mobile-nav-button{
 
-    color: ${({ theme }) => theme.body} !important; 
-    background: ${({ theme }) => theme.primary} !important; 
+    color: ${({ theme }) => theme.primaryText} !important; 
+    background: ${({ theme }) => theme.secondary} !important; 
 }
 
 .desktop-menu{
@@ -229,6 +230,16 @@ export const GlobalStyles = createGlobalStyle`
 a:hover{
         color: ${({ theme }) => theme.primary} !important; 
     
+}
+
+.nav-item:hover{
+    color: ${({ theme }) => theme.primary} !important; 
+}
+
+
+
+.arrow:hover{
+    fill: ${({ theme }) => theme.primary} !important; 
 }
 
 .case-link:hover{
@@ -354,6 +365,11 @@ a {
 
 .case-toggle{
     background: ${({ theme }) => theme.body}
+}
+
+input,textarea{
+    color: ${({ theme }) => theme.primaryText};
+    font-weight: 600;
 }
 
 

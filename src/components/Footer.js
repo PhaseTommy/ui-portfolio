@@ -107,33 +107,23 @@ const Footer = () => {
                             LinkedIn
                         </FooterLink>
                     </FooterItem>
-                    <FooterItem
-                        style={{ marginBottom: "0px" }}
-                        className="paragraph"
-                    >
-                        The Dots
-                    </FooterItem>
                 </FootL>
                 <FootM>
                     <FootLogo src={LogoWebP} fallback={Logo} alt="Logo" />
-                    <LogoText>All rights reserved Tommy Smith</LogoText>
+                    <LogoText>Hand crafted with React ❤️</LogoText>
                 </FootM>
                 <FootR>
                     <FooterTitle>Navigation</FooterTitle>
+                    <NavLink to="/ballr" style={{ textDecoration: "none" }}>
+                        <FooterItem className="paragraph case-link">
+                            Ballr
+                        </FooterItem>
+                    </NavLink>
                     <NavLink to="/diabetes" style={{ textDecoration: "none" }}>
                         <FooterItem className="paragraph case-link">
                             Living With Diabetes
                         </FooterItem>
                     </NavLink>
-                    <FooterItem className="paragraph case-link">
-                        Phase Robotics App
-                    </FooterItem>
-                    <FooterItem
-                        style={{ marginBottom: "0px" }}
-                        className="paragraph"
-                    >
-                        Redistributing Health
-                    </FooterItem>
                 </FootR>
             </FooterContent>
         </FooterWrap>
