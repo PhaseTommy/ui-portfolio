@@ -206,13 +206,6 @@ const Navbar = () => {
                         </BrandTitle>
                     </NavL>
 
-                    <NavM className="slash-button">
-                        Press the{" "}
-                        <SlashButton className="slash">
-                            <strong>C</strong>
-                        </SlashButton>
-                        key to contact me!
-                    </NavM>
                     <NavR>
                         <ToggleThemeBtn
                             onClick={toggleTheme}

@@ -132,13 +132,11 @@ const Hero = () => {
                 projects.
             </ParagraphText>
 
-            <HireButton
-                onClick={() => setContactForm(true)}
-                animation={{ scale: 1.2 }}
-                className="hero-button"
-            >
-                Contact Me!
-            </HireButton>
+            <a href="mailto:tom@smithmail.net">
+                <HireButton animation={{ scale: 1.2 }} className="hero-button">
+                    Contact Me!
+                </HireButton>
+            </a>
         </HeroWrapper>
     );
 };

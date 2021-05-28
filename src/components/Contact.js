@@ -97,9 +97,11 @@ const Contact = () => {
                     </Subtitle>
                 </TitleWrap>
                 {/* <ContactBtnWrap> */}
-                <ContactButton className="contact-btn">
-                    Contact Me!
-                </ContactButton>
+                <a href="mailto:tom@smithmail.net">
+                    <ContactButton className="contact-btn">
+                        Contact Me!
+                    </ContactButton>
+                </a>
                 {/* </ContactBtnWrap> */}
             </Content>
         </Wrapper>

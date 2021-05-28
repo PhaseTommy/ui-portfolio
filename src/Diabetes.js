@@ -25,6 +25,22 @@ import FinalDiabetesWebP from "./assets/diabetes-final-screens.webp";
 
 import { NavbarContextList } from "./context/NavbarContext";
 import ImgWithFallback from "./components/ImgWithFallback";
+import ImgWithFallbackTwo from "./components/ImgWithFallbackTwo";
+
+import UserFlowManualWebP from "./assets/user-flow-manual.webp";
+import UserFlowManual from "./assets/user-flow-manual.png";
+
+import UserFlowAlert from "./assets/user-flow-alert.png";
+import UserFlowAlertWebP from "./assets/user-flow-alert.webp";
+
+import HomeSS from "./assets/home-ss.png";
+import HomeSSWebP from "./assets/home-ss.webp";
+
+import ManualSS from "./assets/manual-ss.png";
+import ManualSSWebP from "./assets/manual-ss.webp";
+
+import EmergencySS from "./assets/emergency-ss.png";
+import EmergencySSWebP from "./assets/emergency-ss.webp";
 
 const Wrapper = styled.div``;
 
@@ -146,6 +162,19 @@ const ExternalIcon = styled(motion.svg)`
         transition: fill ease-in-out 0.2s;
         fill: #e57a44;
     }
+`;
+
+const ChallengesBox = styled.div`
+    padding-left: 16px;
+    color: ${({ theme }) => theme.primaryText};
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-top: 32px;
+    background-color: ${({ theme }) => theme.secondary};
+    padding: 16px;
+    border-radius: 8px;
+    text-align: center;
+    line-height: 150%;
 `;
 
 const ExternalLinkText = styled(motion.h4)`
@@ -279,27 +308,152 @@ const Diabetes = () => {
                         style={{ marginTop: "64px" }}
                         className="paragraph"
                     >
+                        <div
+                            className="external-link"
+                            style={{
+                                paddingTop: "16px",
+                                paddingBottom: "16px",
+                                paddingLeft: "24px",
+                                paddingRight: "24px",
+                                borderRadius: "8px",
+                                marginTop: "32px",
+                                marginBottom: "64px",
+                            }}
+                        >
+                            <ParagraphText
+                                style={{
+                                    fontFamily: "europa",
+                                    fontSize: "18px",
+                                    fontWeight: "600",
+                                }}
+                                className="paragraph"
+                            >
+                                <strong>What </strong>is the product?{" "}
+                                <p
+                                    style={{
+                                        fontWeight: "400",
+                                        marginTop: "0px",
+                                    }}
+                                >
+                                    A mobile applciation.
+                                </p>
+                            </ParagraphText>
+
+                            <ParagraphText
+                                style={{
+                                    marginTop: "16px",
+                                    fontFamily: "europa",
+                                    fontSize: "18px",
+                                    fontWeight: "600",
+                                }}
+                                className="paragraph"
+                            >
+                                <strong>Who </strong>is it for?{" "}
+                                <p
+                                    style={{
+                                        fontWeight: "400",
+                                        marginTop: "0px",
+                                    }}
+                                >
+                                    Type 1 Diabetics.
+                                </p>
+                            </ParagraphText>
+
+                            <ParagraphText
+                                style={{
+                                    marginTop: "16px",
+                                    fontFamily: "europa",
+                                    fontSize: "18px",
+                                    fontWeight: "600",
+                                }}
+                                className="paragraph"
+                            >
+                                <strong>Why </strong>does it need to exist?{" "}
+                                <p
+                                    style={{
+                                        fontWeight: "400",
+                                        marginTop: "0px",
+                                    }}
+                                >
+                                    To allow Type 1 Diabetics to better control
+                                    their illness.
+                                </p>
+                            </ParagraphText>
+
+                            <ParagraphText
+                                style={{
+                                    marginTop: "16px",
+                                    fontFamily: "europa",
+                                    fontSize: "18px",
+                                    fontWeight: "600",
+                                }}
+                                className="paragraph"
+                            >
+                                What does it need to do?{" "}
+                                <p
+                                    style={{
+                                        fontWeight: "400",
+                                        marginTop: "0px",
+                                    }}
+                                >
+                                    Provide an effective way for diabetics to
+                                    record their blood sugar levels.
+                                </p>
+                            </ParagraphText>
+                        </div>
                         Through extensive research and user interviews it was
                         concluded that whilst the current diabetes management
-                        applications are effective, they are also sub-optimal.
-                        There was room for vast improvements across multiple
-                        areas of the application. <br />
+                        applications are fairly effective, there is significant
+                        improvements that can be made to the user experience
+                        with a few subtle changes. <br />
                         <br /> During the research phase, one of the largest
-                        pain points of the user experience came with the
-                        inability to set alarms for when the glucose levels fell
-                        below a certain level. Something that ensures the user
-                        knows when they are in dangerous glucose levels. <br />
+                        pain points for the user came from the inability to set
+                        alarms when their glucose levels fell below a certain
+                        level. Something that ensures the user knows when they
+                        are in dangerous glucose levels. <br />
                         <br /> I intended to create a much more refined
                         experience for the user by reworking some of the
                         existing UX patterns; but also improving on successful
                         patterns already found in similar applications.
                     </ParagraphText>
-                    <ImgWithFallback
-                        style={{ marginTop: "64px" }}
-                        src={DiabetesWireframesWebP}
-                        fallback={DiabetesWireframes}
-                        alt="Mobile Wireframes"
-                    />
+                    <BodyTitle className="colored-text">Challenges </BodyTitle>
+                    <ChallengesBox>
+                        Establishing an effective UX route to alert emergency
+                        contacts of low blood sugar levels.
+                    </ChallengesBox>
+                    <ParagraphText className="paragraph">
+                        Ensuring that the user had a clear route to alert
+                        emergency contacts of low blood sugar levels was
+                        integral to the success of the project. I decided that
+                        the most effective way to communicate this UX pathway
+                        was through a large red button on the homescreen. The
+                        red colour reinforces the emergency aspect.
+                    </ParagraphText>
+                    <ChallengesBox>
+                        Ensuring the user is able to manually add blood sugar
+                        readings through the app.
+                    </ChallengesBox>
+                    <ParagraphText className="paragraph">
+                        It was imperative that the user was able to add their
+                        own blood sugar readings, that had not been
+                        automatically recorded by the device. To solve this I
+                        placed the plus button on the homescreen to indicate to
+                        the user that they could add new readings.
+                    </ParagraphText>
+                    <ChallengesBox>
+                        Allowing the user to see their previously recorded blood
+                        sugar levels at a glance.
+                    </ChallengesBox>
+                    <ParagraphText className="paragraph">
+                        By allowing the user a look at their average blood sugar
+                        levels for the week, they are able to determine the
+                        appropriate lifestyle changes to ensure they are in a
+                        safe range. To accomplish this a graph with the daily
+                        averages is featured on the homescreen, coupled with a
+                        traffic light system to indicate to the user whether or
+                        not they are in their ideal range.
+                    </ParagraphText>
+
                     <BodyTitle className="colored-text">The Process</BodyTitle>
                     <ParagraphText
                         style={{ marginTop: "64px" }}
@@ -319,79 +473,114 @@ const Diabetes = () => {
                         the prototype. During my research this was something
                         that I found to be of great importance to diabetics who
                         already use an application to manage their diabetes.{" "}
-                        <br />
-                        <br />
-                        The wireframes show the process of determining a layout
-                        for each of the screens, and gives some insight into how
-                        the visual structure would be represented in the final
-                        screen design. It allows many layouts to be tested
-                        quickly using a set of predetermined components to
-                        represent different visual elements.
                     </ParagraphText>
-                    <ImgWithFallback
-                        style={{ marginTop: "64px" }}
-                        src={DiabetesTypeWebP}
-                        fallback={DiabetesType}
-                        alt="Typography Choice"
+                    <SmallTitle
+                        className="paragraph"
+                        style={{ marginTop: "48px", marginBottom: "16px" }}
+                    >
+                        Wireframes:
+                    </SmallTitle>
+                    <ParagraphText className="paragraph">
+                        {" "}
+                        The wireframing process allowed for the quick testing of
+                        multiple different layouts for some of the interfaces
+                        key touch points.
+                    </ParagraphText>
+                    <ImgWithFallbackTwo
+                        src={DiabetesWireframesWebP}
+                        fallback={DiabetesWireframes}
+                        alt="User Personas"
+                        style={{
+                            marginTop: "32px",
+                            gridColumn: "2/3",
+                            width: "100%",
+                            borderRadius: "8px",
+                        }}
                     />
+                    <SmallTitle
+                        className="paragraph"
+                        style={{ marginTop: "48px", marginBottom: "16px" }}
+                    >
+                        User Flows:
+                    </SmallTitle>
+                    <ParagraphText className="paragraph">
+                        {" "}
+                        In order to streamline the UX for the user, it was
+                        important to map out how they might interact with some
+                        of the key features. The first feature that was mapped
+                        out was the ability to manually add blood sugar
+                        readings. By determining an optimal route for the user
+                        to take to add their own blood sugar readings, it made
+                        the design process much easier.
+                    </ParagraphText>
+                    <ImgWithFallbackTwo
+                        src={UserFlowManualWebP}
+                        fallback={UserFlowManual}
+                        alt="User Flow - Manual Add"
+                        style={{
+                            marginTop: "32px",
+                            gridColumn: "2/3",
+                            width: "100%",
+                            borderRadius: "8px",
+                        }}
+                    />
+                    <ParagraphText style={{}} className="paragraph">
+                        {" "}
+                        Due to the important nature of the emergency contact
+                        alert system, it was imperative that the user experience
+                        allowed for the button to be pressed in as few steps as
+                        possible. This explains the inclusion of this feature on
+                        the homescreen, as well as being reinforced by the red
+                        colour.
+                    </ParagraphText>
+                    <ImgWithFallbackTwo
+                        src={UserFlowAlertWebP}
+                        fallback={UserFlowAlert}
+                        alt="User Flow - Manual Add"
+                        style={{
+                            marginTop: "32px",
+                            gridColumn: "2/3",
+                            width: "100%",
+                            borderRadius: "8px",
+                        }}
+                    />
+
                     <BodyTitle className="colored-text">
-                        The Type Choice
+                        The Outcomes:
                     </BodyTitle>
-                    <ParagraphText
-                        style={{ marginTop: "64px" }}
-                        className="paragraph"
-                    >
-                        Typeface choice is usually a dificult decision. In this
-                        instance it was important to have something that was
-                        visually appealing; but also very effective at
-                        communicating data. This is because when dealing with
-                        sensitive data it is imperative that it is easily
-                        legible and not easily confused. <br />
-                        <br /> Amidst the visual overhaul it was important to
-                        have a typeface that showed off the modern visuals and
-                        accompany it accordingly. I also ensured that it was
-                        versatile at different weights and that light body text
-                        was still easily legible.
-                        <br />
-                        <br />
-                        The typeface that I decided was appropriate for this
-                        project was 'Circular STD'. Circular is a geometric
-                        sans-serif type that was created by Swiss designer
-                        Laurenz Brunner; it is based off geometric shapes but
-                        features significant quirks that add to the welcoming
-                        feel of the type.
-                    </ParagraphText>
-                    <ImgWithFallback
-                        style={{ marginTop: "64px" }}
-                        src={ColoursDiabetesWebP}
-                        fallback={ColoursDiabetes}
-                        alt="Colour Choice"
+                    <ImgWithFallbackTwo
+                        src={HomeSSWebP}
+                        fallback={HomeSS}
+                        alt="Homepage Screenshot"
+                        style={{
+                            marginTop: "32px",
+                            gridColumn: "2/3",
+                            width: "100%",
+                            borderRadius: "8px",
+                        }}
                     />
-                    <BodyTitle className="colored-text">The Colours</BodyTitle>
-                    <ParagraphText
-                        style={{ marginTop: "64px" }}
-                        className="paragraph"
-                    >
-                        The colours in contribute massively to the UX of the
-                        interface and allow for it to function effectively. The
-                        purple was chosen as a calming and welcoming colour that
-                        prevents the user from feeling overwhelmed before they
-                        enter the crux of the application. <br />
-                        <br /> The other three 'bright' colours are used in the
-                        'traffic light' system to ensure the user gets a visual
-                        response to accompany text values; allowing them to more
-                        easily determine if they are too high or too low. I
-                        wanted the colours to be recognisable but also modern,
-                        as a result I decided that pastel colours where more
-                        likely to give the application a more modern feel.
-                    </ParagraphText>
-                    <ImgWithFallback
-                        style={{ marginTop: "64px" }}
-                        src={FinalDiabetesWebP}
-                        fallback={FinalDiabetes}
-                        alt="Colour Choice"
+                    <ImgWithFallbackTwo
+                        src={ManualSSWebP}
+                        fallback={ManualSS}
+                        alt="Manual Add Screenshot"
+                        style={{
+                            marginTop: "32px",
+                            gridColumn: "2/3",
+                            width: "100%",
+                            borderRadius: "8px",
+                        }}
                     />
-                    <BodyTitle className="colored-text">The Outcome</BodyTitle>
+                    <ImgWithFallbackTwo
+                        src={EmergencySSWebP}
+                        fallback={EmergencySS}
+                        alt="Emergency Contact Screenshot"
+                        style={{
+                            marginTop: "32px",
+                            gridColumn: "2/3",
+                            width: "100%",
+                            borderRadius: "8px",
+                        }}
+                    />
                     <ParagraphText
                         style={{ marginTop: "64px", marginBottom: "64px" }}
                         className="paragraph"
